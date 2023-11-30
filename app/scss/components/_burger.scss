@@ -1,0 +1,41 @@
+.hd-burger {
+  padding: 1.2rem 2rem;
+  &.active .line:nth-child(1) {
+    -webkit-transform: translate3d(0, 0.3rem, 0) rotate(45deg) !important;
+    transform: translate3d(0, 0.3rem, 0) rotate(45deg) !important;
+  }
+
+  &.active .line:nth-child(2) {
+    -webkit-transform: translate3d(0, -0.4rem, 0) rotate(135deg) !important;
+    transform: translate3d(0, -0.4rem, 0) rotate(135deg) !important;
+    width: 2.4rem;
+  }
+  cursor: pointer;
+  @include min(1201px) {
+    display: none;
+  }
+}
+
+.burger {
+  position: relative;
+}
+
+.hamburger .line {
+  width: 2.4rem;
+  height: 0.2rem;
+  border-radius: 0.4rem;
+  background: $color-white;
+  display: block;
+  margin: 0.5rem 0;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+
+  &:nth-child(2) {
+    width: 1.8rem;
+    margin-left: auto;
+  }
+}

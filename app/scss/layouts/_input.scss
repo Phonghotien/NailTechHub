@@ -1,0 +1,76 @@
+.input {
+    @include font-pri;
+    width: 100%;
+
+    &-area {
+        height: auto;
+    }
+}
+
+
+.re {
+    &-label {
+        color: $color-black;
+        font-weight: 700;
+        margin-bottom: 0.8rem;
+        display: block;
+        font-size: 1.4rem;
+    }
+
+    &-input {
+        padding: 1.4rem;
+        width: 100%;
+        @include font-pri;
+        border: none;
+        outline: none;
+        display: block;
+        border: .1rem solid $color-border-01;
+        border-radius: .8rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+
+        &:focus {
+            border-color: $color-second;
+        }
+
+        @include input-placeholder {
+            color: $color-text;
+        }
+    }
+
+
+}
+
+textarea {
+    resize: none;
+}
+
+form {
+    .wpcf7-not-valid-tip {
+        color: $color-pri;
+        bottom: .1rem;
+        right: .6rem;
+    }
+
+    .btn {
+        .wpcf7-spinner {
+            position: absolute;
+        }
+    }
+
+    .wpcf7-form-control-wrap {
+        display: block;
+        position: relative;
+    }
+}
+
+
+
+.wpcf7-response-output {
+    text-align: center;
+    color: $color-pri !important;
+}
+
+.ft-regi-btn {
+    cursor: pointer;
+}

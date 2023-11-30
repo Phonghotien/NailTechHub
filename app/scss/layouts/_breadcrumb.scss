@@ -1,0 +1,47 @@
+.breadcrumb {
+  &-wrapper {
+    padding: 2rem 0;
+    border-bottom: 0.1rem solid rgba(59, 48, 48, 0.1);
+  }
+
+  &-list {
+    @include flex;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    gap: 0.8rem;
+  }
+
+  &-item {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #828b8c;
+    &:not(:first-child) {
+      &::before {
+        display: inline-block;
+        content: "\f061";
+        font-family: "Font Awesome 5 Pro";
+        vertical-align: middle;
+        position: relative;
+        color: #828b8c;
+      }
+    }
+
+    &:last-child {
+      color: $color-pri;
+      pointer-events: none;
+      font-weight: 600;
+    }
+
+    @include hover {
+      color: $color-pri;
+    }
+  }
+
+  &-link {
+    color: inherit;
+    transition: 0.2s ease-in-out;
+  }
+}

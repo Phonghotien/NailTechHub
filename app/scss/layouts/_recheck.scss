@@ -1,0 +1,85 @@
+.recheck {
+  &-item {
+    @include flex;
+    align-items: center;
+    cursor: pointer;
+
+    &.active {
+      .recheck-checkbox {
+        background: $color-pri;
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      .recheck-radio {
+        border: 0.1rem solid $color-pri;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &-checkbox {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.4rem;
+    background-color: transparent;
+    border: 1px solid $color-pri;
+    position: relative;
+    flex-shrink: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      @include full-size(0.2rem);
+      background-image: url(../assets/images/tick.svg);
+      @include default-background;
+      background-size: contain;
+      transition: 0.1s ease-in-out;
+      opacity: 0;
+    }
+  }
+
+  &-radio {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100rem;
+    border: 0.1rem solid $color-text-second;
+    flex-shrink: 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      @include mid;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 100rem;
+      background-color: $color-pri;
+      opacity: 0;
+    }
+  }
+
+  &-method {
+    width: 4.8rem;
+    height: 4.8rem;
+    border: 0.1rem solid #ebebeb;
+    border-radius: 0.8rem;
+    @include mid-flex;
+    margin-left: 0.8rem;
+
+    img {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  &-text {
+    margin-left: 0.8rem;
+    line-height: 1.1;
+    color: $color-text;
+    font-size: 1.6rem;
+  }
+}

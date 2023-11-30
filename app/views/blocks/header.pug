@@ -1,0 +1,118 @@
+header.hd 
+   .hd-wrapper 
+      .container 
+         .hd-wrap 
+            .hd-burger#hamburger 
+              .burger 
+                .hamburger  
+                  .line 
+                  .line
+            .hd-menu 
+               .hd-nav
+                  .menu-nav 
+                     ul.menu-list 
+                        li.menu-item.dropdown 
+                           a(href="").menu-link
+                              |  ABOUT
+                           ul.menu-list 
+                              li.menu-item 
+                                 a(href="").menu-link 
+                                    | Demo 1
+                              li.menu-item 
+                                 a(href="").menu-link 
+                                    | Demo 2
+                        li.menu-item.current-menu-item 
+                           a(href="").menu-link
+                              | SERVICE 
+                        li.menu-item 
+                           a(href="").menu-link
+                              | BLOG 
+                        li.menu-item 
+                           a(href="").menu-link
+                              | CONTACT 
+                        li.menu-item 
+                           a(href="").menu-link
+                              | BOOKING
+            .hd-ctr 
+               .igr 
+                  .hd-user 
+                     span.icon 
+                        +img("icon-user.svg")
+                  .hd-search.hd-open-search 
+                     span.icon 
+                        +img("icon-search.svg")
+            .hd-logo 
+               a(href="").custom-logo-link
+                  +img("logo.png") 
+   .mobile-overlay
+   .mobile
+      .mobile-con
+         .mobile-wr
+            .mobile-nav
+               .menu-nav
+                  ul.menu-list
+                     li.menu-item
+                        a.menu-link(href='')
+                           | ABOUT
+                     li.menu-item
+                        a.menu-link(href='')
+                           | SERVICE
+                     li.menu-item.dropdown
+                        a.menu-link(href='')
+                           | BLOG
+                        ul.menu-list
+                           li.menu-item
+                              a.menu-link(href='')
+                                 | DemoSp
+                           li.menu-item
+                              a.menu-link(href='')
+                                 | DemoSp
+                     li.menu-item
+                        a.menu-link(href='')
+                           | CONTACT
+                     li.menu-item
+                        a.menu-link(href='')
+                           | BOOKING
+               .mobile-content
+                  p.t-txt 
+                     | Contact Info
+                  .mobile-content-list 
+                     .mobile-content-it 
+                        .igr 
+                           span.t-text 
+                              | Address:
+                           a(href="").t-link
+                              | 3EC Phuc Loc Tho Center, Orange, California, USA
+                     .mobile-content-it 
+                        .igr 
+                           span.t-text 
+                              | Phone:
+                           a(href="").t-link
+                              | +(0) 392 94 03 01
+                     .mobile-content-it 
+                        .igr 
+                           span.t-text 
+                              | Email:
+                           a(href="").t-link
+                              | SupportNAILTECHUB@gmail.com
+         .mobile-mxh
+            a.mobile-mxh-link(href='')
+               +img("icon-social (1).svg")
+            a.mobile-mxh-link(href='')
+                +img("icon-social (2).svg")
+            a.mobile-mxh-link(href='')
+               +img("icon-social (3).svg")
+   .hd-search-wrap
+          .hd-search-close 
+            span.t-text 
+              | CLOSE
+          .hd-search-form 
+            .hd-search-over
+              p.tt-search 
+                | SEARCH 
+            form(action="")
+              .hd-search-ip 
+                input(type="text" placeholder="what do you looking for ...")
+                button.hd-search-btn 
+                  .icon 
+                    +img("icon-search.svg")

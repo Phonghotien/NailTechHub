@@ -1,0 +1,160 @@
+.hd {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+  transition: 0.3s ease-in-out;
+  height: var(--size-hd);
+  background: $color-pri;
+  &.sticky {
+    --size-hd: 8rem;
+    @include max(1200px) {
+      --size-hd: 6rem;
+    }
+  }
+  &-wrapper {
+    height: 100%;
+  }
+  &-wrap {
+    @include flex;
+    align-items: center;
+    margin: 0 -2rem;
+    height: 100%;
+  }
+  &-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .custom-logo-link {
+      width: 10rem;
+      @include mid-flex;
+      @include max(1200px) {
+        width: 8rem;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &-menu {
+    padding: 0 2rem;
+    flex: 1;
+  }
+  &-ctr {
+    padding: 0 2rem;
+    .igr {
+      @include flex;
+      align-items: center;
+      gap: 4rem;
+      @include max(1200px) {
+        gap: 1.6rem;
+      }
+    }
+  }
+  &-user {
+    width: 4rem;
+    height: 4rem;
+    @include mid-flex;
+    flex-shrink: 0;
+    cursor: pointer;
+    @include max(1200px) {
+      width: 3.4rem;
+      height: 3.4rem;
+    }
+    .icon {
+      border-radius: 100rem;
+      @include mid-flex;
+    }
+  }
+  &-search {
+    flex-shrink: 0;
+    width: 4rem;
+    height: 4rem;
+    @include mid-flex;
+    cursor: pointer;
+    @include max(1200px) {
+      width: 3.4rem;
+      height: 3.4rem;
+    }
+    .icon {
+      @include mid-flex;
+    }
+    &-wrap {
+      position: fixed;
+      left: 0;
+      right: 0;
+      width: 100%;
+      top: 0;
+      height: 0;
+      background: #1e1e1e;
+      z-index: 10;
+      visibility: hidden;
+    }
+    &-close {
+      position: absolute;
+      top: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      display: inline-block;
+      padding-bottom: 0.1rem;
+      border-bottom: 0.2rem solid #fff;
+      font-weight: 500;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    &-form {
+      height: 100%;
+      @include mid-flex;
+      flex-direction: column;
+      text-align: center;
+      width: 123rem;
+      padding: 0 1.5rem;
+      max-width: 100%;
+      margin: 0 auto;
+      .tt-search {
+        font-size: 10vw;
+        @include font-second;
+        color: #fff;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+      form {
+        width: 100%;
+      }
+    }
+    &-over {
+      overflow: hidden;
+    }
+    &-ip {
+      width: 100%;
+      margin: 0 auto;
+
+      @include flex;
+      input {
+        width: 100%;
+        border: unset;
+        outline: unset;
+        height: 6rem;
+        text-align: center;
+        padding: 0 1.2rem;
+        @include fz-18;
+        text-transform: capitalize;
+        &::-webkit-input-placeholder {
+          color: #8c8782;
+        }
+      }
+    }
+    &-btn {
+      width: 6rem;
+      height: 6rem;
+      flex-shrink: 0;
+      @include mid-flex;
+      background: $color-second;
+      .icon {
+        width: 4rem;
+      }
+    }
+  }
+}

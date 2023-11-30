@@ -1,0 +1,18 @@
+extends layout/layout
+
+block vars
+    -title = 'Component'
+    -bodyClass = 'page-component'
+
+block container 
+   +breadCrumb(["Projects","Marketing"])
+   +ttp()
+   +tts()
+   +Btn("Full","","full")
+   +Btn("Center","","center")
+   +Btn("White","","center second")
+   +PageNumber()
+   .recheck-block 
+      +check("Check box","checkbox")
+   .recheck-block 
+      +check("Check Radio")

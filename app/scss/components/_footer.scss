@@ -1,0 +1,66 @@
+.sec-ft {
+  border-top: 0.1rem solid #edf2f2;
+}
+.ft {
+  &-logo {
+    @include mid-flex;
+    .custom-logo-link {
+      width: 18rem;
+      margin: 0 auto;
+      display: inline-block;
+    }
+  }
+  &-title {
+    @include fz-24;
+    font-weight: 600;
+    @include font-second;
+    color: $color-pri;
+    margin-bottom: 2.4rem;
+  }
+  &-social {
+    @include flex;
+    gap: 2.4rem;
+    margin-top: 1.6rem;
+    .i-link {
+      width: 4rem;
+      height: 4rem;
+      @include mid-flex;
+    }
+  }
+  &-block {
+    margin-top: 4rem;
+  }
+  &-row {
+    justify-content: space-between;
+    .col {
+      &:first-child {
+        width: calc((4 / 12) * 100%);
+        @include max(768px) {
+          width: 100%;
+        }
+      }
+      width: calc((3 / 12) * 100%);
+      @include max(900px) {
+        width: calc((4 / 12) * 100%);
+      }
+      @include max(768px) {
+        width: 50%;
+      }
+    }
+  }
+  &-menu {
+    &-nav {
+      .menu-list {
+        .menu-item {
+          &:not(:last-child) {
+            margin-bottom: 1.2rem;
+          }
+          .menu-link {
+            @include fz-16;
+            color: #3a3f40;
+          }
+        }
+      }
+    }
+  }
+}

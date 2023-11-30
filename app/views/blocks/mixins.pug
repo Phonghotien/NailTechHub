@@ -1,0 +1,106 @@
+mixin Btn(text, type, classCustom)
+    if(!classCustom)
+        if(type == "button")
+            button.btn(type="submit",class=classCustom)
+                span.inner #{text}
+        else
+            a.btn(href="",class=classCustom)
+                span.inner #{text}
+    else 
+        if(type == "button")
+            button.btn(type="submit",class=classCustom)
+                span.inner #{text}
+        else
+            a.btn(href="", class=classCustom)
+                span.inner #{text}
+mixin PageNumber 
+    ul.page-numbers
+        li 
+            a.prev.page-numbers(href="")
+                i.fa.fa-angle-left
+        li
+            span.page-numbers.current   
+                | 1
+        li
+            a.page-numbers(href="")   
+                | 2
+        li 
+            span.page-numbers.dot 
+                |...
+        li
+            a.page-numbers(href="")   
+                | 10
+        li 
+            a.next.page-numbers(href="")
+                i.fa.fa-angle-right
+mixin breadCrumb(arr)
+  .breadcrumb
+    .container
+      .breadcrumb-wrapper 
+        ul.breadcrumb-list
+          li.breadcrumb-item(data-aos="fade-right")
+            a.breadcrumb-link(href="")
+              | Home
+          each txt in arr
+            li.breadcrumb-item(data-aos="fade-right")
+              a.breadcrumb-link(href="") #{txt}
+mixin pagination(classCustom)
+    .swiper-pagination(class=classCustom)
+mixin CountDown(time,customClass)
+    .cdw(data-time= time, class= customClass)
+      .cdw-list 
+          .cdw-item(style="display: none")
+              .cdw-inner 
+                  .number.date
+          .cdw-item 
+              .cdw-inner 
+                  .number.hour
+          .cdw-item 
+              .cdw-inner 
+                  .number.minute
+          .cdw-item 
+              .cdw-inner 
+                  .number.second
+mixin SwiperControl(customClass)
+    .swiper-control(class= customClass) 
+      .swiper-control-btn.swiper-prev 
+          i.far.fa-long-arrow-left
+      .swiper-control-btn.swiper-next 
+          i.far.fa-long-arrow-right
+mixin Count()
+    .count 
+        .count-btn.count-minus 
+            i.fas.fa-minus.icon
+        input(type="text", class="count-input", max="999", min="0", value="1", hidden)
+        p.count-number 
+        .count-btn.count-plus 
+            i.fas.fa-plus.icon
+mixin img(name)
+  img(src="./assets/images/" + name, alt="")
+mixin ttp(text="Title Pri", sub="Sub title")
+   .head-title 
+      h2.t-title 
+         | #{text}
+      .text-sub 
+         p 
+            | #{sub}
+mixin tts(text="Title Pri", sub="Sub title")
+   .head-title 
+      h2.t-title-second 
+         | #{text}
+      .text-sub 
+         p 
+            | #{sub}
+mixin check(text="check",type,classCustom)
+   if(type == "checkbox")
+      .recheck-item 
+         input(type="checkbox").recheck-input
+         .recheck-checkbox 
+         .recheck-text 
+            | #{text}
+   else
+      .recheck-item 
+         input(type="radio").recheck-input
+         .recheck-radio 
+         .recheck-text 
+            | #{text}

@@ -1,0 +1,60 @@
+ul.page-numbers {
+  margin-top: 2.4rem;
+  padding: 1.2rem;
+  border-radius: 0.4rem;
+  border: 0.1rem solid #edf2f2;
+  background: #fff;
+  box-shadow: 0px 6px 15px 0px rgba(64, 79, 104, 0.05);
+}
+.page-numbers {
+  @include flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  width: fit-content;
+  margin: 0 auto;
+  > li {
+    &:not(:first-child) {
+      margin-left: 8px;
+    }
+    & > .page-numbers {
+      width: 3.2rem;
+      height: 3.2rem;
+      border-radius: 0.3rem;
+      @include mid-flex;
+      background-color: #fff;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      color: #828b8c;
+      font-size: 1.6rem;
+      @include affter($color-pri);
+      &:after {
+        z-index: -1;
+      }
+      @include hover {
+        &:not(.dot) {
+          color: white;
+          &::after {
+            left: 0;
+            width: 100%;
+          }
+        }
+      }
+      &.current {
+        color: white;
+        &::after {
+          left: 0;
+          width: 100%;
+        }
+      }
+      &.dot {
+        background-color: transparent;
+      }
+      i {
+        font-weight: 400;
+      }
+    }
+  }
+}

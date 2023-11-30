@@ -1,0 +1,207 @@
+.swiper-wrapper.row {
+  flex-wrap: nowrap;
+}
+
+.swiper.rows {
+  .col {
+    margin-bottom: 0;
+  }
+}
+
+.swiper-container {
+  overflow: hidden;
+}
+
+.swiper-slide {
+  height: initial;
+  overflow: hidden;
+}
+
+.swiper-pagination {
+  position: static;
+  margin-top: 1.6rem;
+  @include flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  &-bullet {
+    --circle: -0.4rem;
+    background-color: #999;
+    opacity: 1;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    margin: unset !important;
+    transition: 0.1s ease-in-out;
+    @include max(768px) {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: var(--circle);
+      right: var(--circle);
+      bottom: var(--circle);
+      left: var(--circle);
+      border: 0.2rem solid #fff;
+      border-radius: 100rem;
+      transition: 0.1s ease-in-out;
+    }
+
+    &-active {
+      background-color: #fff;
+
+      &::before {
+        opacity: 1;
+        border-color: #3c3030;
+      }
+    }
+  }
+}
+
+.swiper-control {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  --size: 4rem;
+
+  &-btn {
+    width: var(--size);
+    height: var(--size);
+    border-radius: 100rem;
+    background-color: white;
+    border: 0.1rem solid $color-pri;
+    @include mid-flex;
+    cursor: pointer;
+    @include transitionRe;
+    z-index: 5;
+    position: relative;
+    overflow: hidden;
+    font-size: 1.6rem;
+    @include affter($color-pri);
+    color: $color-pri;
+
+    > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    &.swiper-button-disabled {
+      background-color: #eee;
+      cursor: default;
+      box-shadow: none;
+    }
+
+    i {
+    }
+
+    @include hover {
+      &:not(.swiper-button-disabled) {
+        color: white !important;
+
+        &::after {
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &.white {
+    .swiper-control-btn {
+      background-color: transparent;
+      border-color: white;
+      color: white;
+    }
+
+    &.mobile-plus {
+      .swiper-control-btn {
+        @include max(1350px) {
+          background-color: white;
+          border-color: $color-pri;
+          color: $color-pri;
+        }
+      }
+    }
+  }
+
+  &.posi {
+    .swiper-control-btn {
+      @include posi-vertical;
+    }
+
+    &.minus {
+      .swiper-prev {
+        right: calc(100% + 4rem);
+
+        @include max(1350px) {
+          right: unset;
+          left: calc(var(--size) / 2 * -1);
+        }
+      }
+
+      .swiper-next {
+        left: calc(100% + 4rem);
+
+        @include max(1350px) {
+          left: unset;
+          right: calc(var(--size) / 2 * -1);
+        }
+      }
+
+      &.mobile-plus {
+        @include max($res-mobile) {
+          .swiper-prev {
+            left: calc((var(--size) / 2 * -1) + (1.5rem / 2));
+          }
+
+          .swiper-next {
+            right: calc((var(--size) / 2 * -1) + (1.5rem / 2));
+          }
+        }
+      }
+    }
+
+    &.midle {
+      .swiper-prev {
+        left: calc(var(--size) / 2 * -1);
+      }
+
+      .swiper-next {
+        right: calc(var(--size) / 2 * -1);
+      }
+    }
+
+    &.plus {
+      .swiper-prev {
+        left: 1rem;
+      }
+
+      .swiper-next {
+        right: 1rem;
+      }
+    }
+
+    &.mobile-plus {
+      @include max($res-mobile) {
+        .swiper-prev {
+          left: calc((var(--size) / 2 * -1) + (1.5rem / 2));
+        }
+
+        .swiper-next {
+          right: calc((var(--size) / 2 * -1) + (1.5rem / 2));
+        }
+      }
+    }
+  }
+}
+
+.swiper-pagination-progressbar {
+  background: $color-border-01;
+  height: 0.1rem !important;
+}
+
+.swiper-pagination-progressbar-fill {
+  background-color: $color-second !important;
+}

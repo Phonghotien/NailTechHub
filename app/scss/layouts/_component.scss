@@ -1,0 +1,326 @@
+.c-pri {
+    color: $color-pri;
+}
+
+.c-second {
+    color: $color-second;
+}
+
+.c-third {
+    color: $color-third;
+}
+
+.c-four {
+    color: $color-four;
+}
+
+.c-five {
+    color: $color-five;
+}
+
+.c-white {
+    color: white;
+}
+
+.c-black {
+    color: $color-black;
+}
+
+.c-txt {
+    color: $color-text;
+}
+
+.c-txt-s {
+    color: $color-text-second;
+}
+
+.bc-pri {
+    background-color: $color-pri;
+}
+
+.bc-second {
+    background-color: $color-second;
+}
+
+.bc-third {
+    background-color: $color-third;
+}
+
+.bc-four {
+    background-color: $color-four;
+}
+
+.bc-five {
+    background-color: $color-five;
+}
+
+.over-hd {
+    overflow: hidden;
+}
+
+.z-i-1 {
+    z-index: 1;
+}
+
+.z-i-2 {
+    z-index: 2;
+}
+
+.z-i-3 {
+    z-index: 3;
+}
+
+.z-i-4 {
+    z-index: 4;
+}
+
+.z-i-5 {
+    z-index: 5;
+}
+
+.m-mid {
+    margin: 0 auto;
+}
+
+.m-end {
+    margin-left: auto;
+}
+
+.m-top {
+    margin-top: 2.4rem;
+}
+
+.m-start {
+    margin-right: auto;
+}
+
+.f-mid {
+    @include mid-flex;
+}
+
+.f-end {
+    @include flex;
+    justify-content: flex-end;
+}
+
+
+
+
+.lg-download,
+#lg-actual-size,
+#lg-share {
+    display: none;
+}
+
+.lg-backdrop,
+.lg-outer {
+    z-index: 99999;
+}
+
+.lg-outer .lg-thumb-item {
+    border: 0.2rem solid $color-pri;
+    transition: 0.2s ease;
+
+    &.active {
+        border-color: $color-third;
+    }
+
+    @include hover {
+        border-color: $color-third;
+    }
+}
+
+.lg-prev.lg-icon {
+    &::after {
+        display: none;
+    }
+}
+
+.lg-next.lg-icon {
+    &::before {
+        display: none;
+    }
+}
+
+.lg-prev.lg-icon,
+.lg-next.lg-icon {
+    width: 4rem;
+    height: 4rem;
+
+    i {
+        background: $color-pri-ln;
+        @include txt-ln;
+    }
+}
+
+.lg-outer .lg-thumb-outer {
+    background-color: #000;
+}
+
+.lg-close.lg-icon {
+    background: $color-pri-ln;
+    @include txt-ln;
+}
+
+.lg-outer .lg-toogle-thumb {
+    background: $color-pri-ln;
+    @include txt-ln;
+    width: 4rem;
+    height: 4rem;
+}
+
+.lg-img-wrap {
+    border-radius: .8rem;
+}
+
+.lg-thumb-item {
+    border-radius: .8rem;
+}
+
+.lg-outer .lg-thumb {
+    margin: 0 auto -5px;
+}
+
+.tabPanel {}
+
+.tabPanel-second {}
+
+.tabBtn {
+    cursor: pointer;
+}
+
+.orders-table,
+table {
+    .status {
+        font-weight: 700;
+
+        &.waiting {
+            color: #F2C524;
+        }
+
+        &.success {
+            color: $color-third;
+        }
+
+        &.cancle {
+            color: #D31D1D;
+        }
+    }
+}
+
+.slider {
+    position: relative;
+}
+
+.relative {
+    position: relative;
+}
+
+.head {
+    margin-bottom: 3.2rem;
+
+    &.space {
+        @include flex-wr;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+
+    &.center {
+        align-items: center;
+    }
+
+    &.end {
+        align-items: flex-end;
+    }
+
+    &.start {
+        align-items: flex-start;
+    }
+
+    &.mb-center {
+        @include max(700px) {
+            text-align: center;
+
+            .left {
+                width: 100%;
+            }
+
+            .right {
+                width: 100%;
+            }
+
+            .cdw {
+                justify-content: center;
+            }
+
+            .btn {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.hv-bd {
+    position: relative;
+
+    &::before {
+        @include pseudo;
+        @include full-size(.8rem);
+        border: 0.1rem solid white;
+        z-index: 1;
+        transition: .3s all ease-in-out;
+        transform: scale(1.1);
+        opacity: 0;
+        border-radius: 1rem;
+    }
+
+    img {
+        transition: .3s all ease-in-out;
+    }
+
+    @include hover {
+        &::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        img {
+            @include hover-scale;
+        }
+    }
+}
+
+.gItem {
+    cursor: pointer;
+}
+
+.parallaxJS {
+    img {
+        position: relative;
+    }
+}
+
+.hidden-desk {
+    @include min($res-mobile-min) {
+        display: none !important;
+    }
+}
+
+.hidden-mobile {
+    @include max($res-mobile) {
+        display: none !important;
+    }
+}
+
+.full {
+    width: 100%;
+}
+
+.wp-block-image {
+    border-radius: 1.2rem;
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
