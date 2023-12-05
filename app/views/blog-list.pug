@@ -1,0 +1,125 @@
+extends layout/layout
+
+block vars
+   -title = 'Blogs'
+   -bodyClass = 'page-blogs'
+
+block container 
+   +breadCrumb(["Blogs"])
+   section.blog.ss-pd 
+      .container 
+         .blog-wr
+            .head.t-center 
+               p.sub Redefining Nail Artistry for the Modern World
+               +ttp("Latest news and blogs on NAILTECHHUB","") 
+            .blog-flex.row 
+               .blog-main.col.col-8
+                  .wrapper 
+                     .blog-list.row.load-container(data-sl="99", data-init="3",data-show="🡣", data-hide="🡡") 
+                        -
+                           var arrs = [
+                              {
+                                 img:"bl1.jpg",
+                                 name:"The Artistry of Nails Unveiling the Beauty",
+                                 des:"Nail care is not merely a routine; it's an art form. Our blog delves into the world of nail artistry, exploring how intricate designs and skillful craftsmanship can elevate your style.",
+                              },
+                              {
+                                 img:"bl2.jpg",
+                                 name:"The Artistry of Nails Unveiling the Beauty",
+                                 des:"Nail care is not merely a routine; it's an art form. Our blog delves into the world of nail artistry, exploring how intricate designs and skillful craftsmanship can elevate your style.",
+                              },
+                              {
+                                 img:"bl3.jpg",
+                                 name:"The Artistry of Nails Unveiling the Beauty",
+                                 des:"Nail care is not merely a routine; it's an art form. Our blog delves into the world of nail artistry, exploring how intricate designs and skillful craftsmanship can elevate your style.",
+                              },
+                              {
+                                 img:"bl4.jpg",
+                                 name:"The Artistry of Nails Unveiling the Beauty",
+                                 des:"Nail care is not merely a routine; it's an art form. Our blog delves into the world of nail artistry, exploring how intricate designs and skillful craftsmanship can elevate your style.",
+                              },
+                              {
+                                 img:"bl5.jpg",
+                                 name:"The Artistry of Nails Unveiling the Beauty",
+                                 des:"Nail care is not merely a routine; it's an art form. Our blog delves into the world of nail artistry, exploring how intricate designs and skillful craftsmanship can elevate your style.",
+                              },
+                              {
+                                 img:"bl6.jpg",
+                                 name:"The Artistry of Nails Unveiling the Beauty",
+                                 des:"Nail care is not merely a routine; it's an art form. Our blog delves into the world of nail artistry, exploring how intricate designs and skillful craftsmanship can elevate your style.",
+                              }
+                           ]
+                        each val in arrs 
+                           .blog-item.col.load-item
+                              .inner 
+                                 .img 
+                                    a.img-inner(href="")
+                                       +img(val.img)
+                                 .info 
+                                    .info-date 
+                                       .info-date-line 
+                                          +img("h-ic-cld.svg")
+                                          span.txt July 1st 2023
+                                       .info-date-line 
+                                          +img("h-ic-eyes.svg")
+                                          span.txt 231
+                                    h3 
+                                       a(href="").info-tt #{val.name}
+                                    p.info-des #{val.des} 
+                                    .info-ava 
+                                       +img("h-ava.jpg")
+                                       .text 
+                                          p.text-name Sophia Johnson
+                                          p.text-role Sophia nails & spas
+                        .load-btn 
+                           span.text Xem thêm
+               .blog-side.col.col-4
+                  .wrapper 
+                     .blog-srch 
+                        form(action="")
+                           .blog-srch-form 
+                              input(type="text",placeholder="Search")
+                              button
+                                 +img("h-ic-srch.svg") 
+                     .blog-block 
+                        h3.blog-block-tt New posts
+                        .blog-block-list.row 
+                           -
+                              var arrs = [
+                                 "bl1.jpg",
+                                 "bl2.jpg",
+                                 "bl3.jpg",
+                              ]
+                           each val in arrs 
+                              .blog-block-item.col 
+                                 .inner 
+                                    .img 
+                                       a.img-inner(href="")
+                                          +img(val)
+                                    .info 
+                                       h4    
+                                          a.info-tt(href="")   The Artistry of Nails Unveiling the Beauty
+                                       p.info-date July 1st 2023
+                     .blog-block 
+                        h3.blog-block-tt Topic
+                        .blog-block-tag 
+                           a(href="").blog-block-tags Nails
+                           a(href="").blog-block-tags Health
+                           a(href="").blog-block-tags Beauty
+                           a(href="").blog-block-tags Health
+                           a(href="").blog-block-tags Color
+                           a(href="").blog-block-tags Woman
+                           a(href="").blog-block-tags Art
+                           a(href="").blog-block-tags Woman
+                           a(href="").blog-block-tags Lifestyle
+                           a(href="").blog-block-tags Entertaiment
+   section.ab-thanks.ss-pd 
+      .container 
+         .ab-thanks-wr.row
+            .ab-thanks-ctn.col
+               .wrapper(data-text="NAILTECHHUB") 
+                  +tts("If you'd like to learn more about the services","Please visit our Services page")
+                  +Btn("Services","","")
+            .ab-thanks-model.col 
+               .img 
+                  +img("h-model.png")
