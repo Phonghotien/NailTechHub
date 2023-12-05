@@ -26,6 +26,7 @@ import DatePickerModule from "./module/DatePickerModule.js";
 import GsapModule from "./module/GsapModule.js";
 import CountDownModule from "./module/CountDownModule.js";
 import RangeModule from "./module/RangeModule.js";
+import ChartModule from "./module/ChartModule.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   // Animation
@@ -67,4 +68,5 @@ window.addEventListener("DOMContentLoaded", () => {
   CountDownModule();
   RangeModule();
   ScrollTriggerModule();
+  ChartModule();
 });

@@ -1,0 +1,23 @@
+extends layout/layout
+
+block vars
+    -title = 'Team size'
+    -bodyClass = ''
+
+block container 
+   +breadCrumb(["Verify phone","Business name","Service","Team size","Location","Software used","Know from where"])
+   section.sec-subus.ss-pd.sec-subus-size
+      .container 
+         .subus 
+            .subus-wrap 
+               .subus-head 
+                  .head-title.t-center 
+                     +tts("What your team sizes?","This will help us set up your calendar correctly. You can have unlimited team members for free on NAILTECHHUB")
+               .subus-block
+                  form(action="")
+                     .subus-size-gr.recheck-block
+                        +check("It’s just me","")
+                        +check("2 -5 people","")
+                        +check("6 -10 people","")
+                        +check("11+ people","")
+                     +Btn("Next step","button","center")

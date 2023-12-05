@@ -94,13 +94,13 @@ mixin tts(text="Title Pri", sub="Sub title")
 mixin check(text="check",type,classCustom)
    if(type == "checkbox")
       .recheck-item 
-         input(type="checkbox").recheck-input
+         input(type="checkbox" hidden).recheck-input
          .recheck-checkbox 
          .recheck-text 
             | #{text}
    else
       .recheck-item 
-         input(type="radio").recheck-input
+         input(type="radio" hidden).recheck-input
          .recheck-radio 
          .recheck-text 
             | #{text}

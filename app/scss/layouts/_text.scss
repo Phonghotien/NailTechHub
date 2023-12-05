@@ -2,6 +2,7 @@
   @include fz-64;
   font-weight: 500;
   color: $color-pri;
+  margin-bottom: 0.8rem;
   @include font-second;
   @include max(600px) {
     font-size: 3.4rem;

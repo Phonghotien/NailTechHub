@@ -1,0 +1,165 @@
+extends layout/layout
+
+block vars
+    -title = 'Account'
+    -bodyClass = ''
+    -hdClass='hd-account'
+
+block container 
+   +breadCrumb(["Management"])
+   .sec-acc.ss-pd
+      .container 
+         .acc 
+            .acc-wrap 
+               .acc-row.row 
+                  .acc-left.col.col-3
+                     .acc-control 
+                        .acc-info 
+                           .igr 
+                              .acc-info-image 
+                                 .inner.preview-img
+                                    +img("avt-acc.jpg")
+                                 label.icon-edit(for='up-file-avt')
+                                    span.icon
+                                       +img("icon-edit.svg")
+                                    input#up-file-avt.upload-image(hidden='' type='file')
+                              span.t16.fw-6.c-pri
+                                 | Excellent Nails
+                        .acc-ctrs 
+                           .acc-ctrs-list 
+                              a(href="").t-link.active
+                                 span.icon 
+                                    +img("icon-acc-link.svg")
+                                 span.t-text 
+                                    | Booth Information
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link2.svg")
+                                 span.t-text 
+                                    | Booking Management
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link4.svg")
+                                 span.t-text 
+                                    | Service Management
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link3.svg")
+                                 span.t-text 
+                                    | Employee Management
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link5.svg")
+                                 span.t-text 
+                                    | Report
+                        .acc-log
+                           +Btn("Logout","","full")
+                  .acc-right.col.col-8
+                     .acc-prof 
+                        .acc-prof-head 
+                           .t-title 
+                              | Booth information
+                        .acc-prof-row.row 
+                           .acc-prof-left.col.col-6 
+                              .acc-prof-py
+                                 .acc-prof-top 
+                                    .acc-prof-image 
+                                       .inner 
+                                          +img("acc-prof-img.jpg")
+                                    p.name
+                                       | Excellent Nails
+                                 .acc-prof-mid 
+                                    .acc-prof-ul 
+                                       .acc-prof-li 
+                                          .igrs 
+                                             span.icon 
+                                                +img("icon-acc-date.svg")
+                                             p.t-text 
+                                                | Joined Oct 2023
+                                       .acc-prof-li 
+                                          .igrs 
+                                             span.icon 
+                                                +img("icon-acc-prof (1).svg")
+                                             p.t-text 
+                                                span.fw-7.c-pri 
+                                                   | Open 
+                                                | untill
+                                                span.fw-7.c-pri 
+                                                   | 10:00pm
+                                          .icon-edit 
+                                             +img("icon-edit.svg")
+                                       .acc-prof-li 
+                                          .igrs 
+                                             span.icon 
+                                               +img("icon-acc-prof (4).svg")
+                                             p.t-text 
+                                                | Little Saigon, Carlifornia
+                                          .icon-edit 
+                                             +img("icon-edit.svg")
+                                       .acc-prof-li 
+                                          .igrs 
+                                             span.icon 
+                                                +img("icon-acc-prof (3).svg")
+                                             p.t-text 
+                                                | 5.0 (1500 review)
+                                       .acc-prof-li 
+                                          .igrs 
+                                             span.icon 
+                                                +img("icon-acc-prof (2).svg")
+                                             p.t-text 
+                                                | 250 appointments booked yet
+                           .acc-prof-right.col.col-6 
+                              .acc-prof-ot 
+                                 .acc-bio 
+                                    .acc-prof-py 
+                                       .acc-bio-head 
+                                          .t-title.t32 
+                                             | Bio 
+                                          span.icon 
+                                             +img("icon-edit.svg")
+                                       .acc-bio-des
+                                          p 
+                                             |With over 10 years in the beauty industry, Sophia is a seasoned Nail and Hair Stylist known for her innovative and personalized approach. She has a knack for creating fresh, elegant looks that enhance her clients' natural beauty. Sophia continuously updates her skills to stay current with the latest trends and techniques in nail design and hair styling.
+                                 .acc-prof-bn 
+                                    a(href="").inner 
+                                       +img("acc-prof-bn.jpg")
+                                 .acc-prof-btn 
+                                    +Btn("Start now","","center")
+   .popup.popup-setup(data-popup-id="popup-setup")
+      .popup-overlay
+      .popup-main
+         .popup-main-wrapper
+            .popup-over
+               .popup-wrapper
+                  .popup-setup-main
+                     .t-title.fw-7.t40 
+                        | Setup guide
+                     .igr 
+                        .igr-py
+                           .igr-head 
+                              p.t-text 
+                                 | Hi Duc, continue setting up your new account
+                              span.t-txt 
+                                 | 3 of 5 tasks completed
+                           .igr-chart 
+                              .chart-circle.chart-js(data-percent="80")
+                                 .tag 
+                                    | 0
+                     .popup-setup-check.recheck-block
+                        .popup-setup-check-it 
+                           +check("Add your business address","checkbox")
+                        .popup-setup-check-it 
+                           +check("Add your business website","checkbox")
+                        .popup-setup-check-it 
+                           +check("Set up your service list","checkbox")
+                        .popup-setup-check-it 
+                           +check("Set up your team members","checkbox")
+                        .popup-setup-check-it 
+                           +check("Set up your working hours","checkbox")
+                     .popup-setup-tlink
+                        a(href="").t-link
+                           |  Need more help?
+                     .popup-setup-btn 
+                        +Btn("FAQs","","center")
+         .popup-close
+            i.fas.fa-times.icon

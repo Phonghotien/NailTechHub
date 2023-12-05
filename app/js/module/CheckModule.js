@@ -53,15 +53,30 @@ export default function CheckModule() {
       }
     }
   });
-  $(document).ready(function () {
-    $(".popup-printf-recheck .recheck-input").change(function (e) {
-      e.preventDefault();
-      if (this.checked) {
-        console.log("run");
-        $(".recheck-img").slideDown();
+  let selectedOrder = [];
+
+  // Lắng nghe sự kiện khi checkbox thay đổi
+  $(".recheck-input").change(function () {
+    updateOrder();
+  });
+
+  // Cập nhật thứ tự và hiển thị thông tin
+  function updateOrder() {
+    selectedOrder = [];
+    $(".recheck-input:checked").each(function (index) {
+      selectedOrder.push(index + 1);
+    });
+
+    $(".subus-sls-it").each(function (index) {
+      const orderInfo = $(this).closest(".igr").find(".order-info");
+      console.log(orderInfo);
+      if (selectedOrder.includes(index + 1)) {
+        orderInfo.text(
+          " - Chọn thứ tự: " + (selectedOrder.indexOf(index + 1) + 1)
+        );
       } else {
-        $(".recheck-img").slideUp();
+        orderInfo.text("");
       }
     });
-  });
+  }
 }
