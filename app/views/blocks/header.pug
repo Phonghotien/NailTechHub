@@ -1,4 +1,4 @@
-header.hd 
+header.hd(class=hdClass) 
    .hd-wrapper 
       .container 
          .hd-wrap 
@@ -7,6 +7,17 @@ header.hd
                 .hamburger  
                   .line 
                   .line
+            .hd-setup.popup-open(data-popup="popup-setup") 
+               .igr-py
+                  .hd-chart 
+                     .hd-chart-js.chart-circle(data-percent="80")
+                        .tag 
+                           | 0%
+                  .igr-txt 
+                     span.t-text 
+                        | Complete Setup
+                     span.icon 
+                        i.fa-light.fa-arrow-right
             .hd-menu 
                .hd-nav
                   .menu-nav 
@@ -38,6 +49,9 @@ header.hd
                   .hd-user 
                      span.icon 
                         +img("icon-user.svg")
+                  .hd-notice 
+                     span.icon 
+                        +img("hd-notice.svg")
                   .hd-search.hd-open-search 
                      span.icon 
                         +img("icon-search.svg")

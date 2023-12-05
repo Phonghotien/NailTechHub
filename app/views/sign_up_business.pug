@@ -1,0 +1,32 @@
+extends layout/layout
+
+block vars
+    -title = 'Business name'
+    -bodyClass = ''
+
+block container 
+   +breadCrumb(["Verify phone","Business name","Service","Team size","Location","Software used","Know from where"])
+   section.sec-subus.ss-pd 
+      .container 
+         .subus
+            .subus-wrap 
+               .subus-head 
+                  .head-title.t-center 
+                     +tts("What service do you offer?","Choose your primary and up to 3 related service types")
+               .subus-block 
+                  form(action="") 
+                     .subus-sls.recheck-block 
+                        .subus-sls-row.row 
+                           each i in Array(13)
+                              .col.col-4 
+                                 .subus-sls-it.recheck-item 
+                                    input(type="checkbox").recheck-input
+                                    .igr 
+                                       span.icon 
+                                          +img("nail-icon.svg")
+                                       span.t-text 
+                                          | Nail services 1
+                                       .t-num
+                                          span.t-tag
+                                             | Primary
+                     +Btn("Next step","submit","center")

@@ -38,6 +38,7 @@
     width: 70rem;
     max-width: 95%;
     @include transitionRe;
+    position: fixed;
     opacity: 0;
     visibility: hidden;
 
@@ -75,19 +76,17 @@
     right: 1.6rem;
     cursor: pointer;
     transition: 0.6s ease-in-out;
-    width: 3rem;
-    height: 3rem;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 4rem;
+    height: 4rem;
     @include mid-flex;
-    background-color: white;
     z-index: 3;
-
+    border-radius: 1rem;
+    background: #f5f7f7;
     &:hover {
       .icon {
         transform: rotate(360deg);
       }
     }
-
     .icon {
       color: $color-black;
       font-weight: 300;
@@ -95,164 +94,83 @@
       @include transition(0.6s, ease-in-out);
     }
   }
-
-  &-gg {
-    .popup {
-      &-wrapper {
-        padding: 2.4rem;
-        max-height: 80vh;
-        display: flex;
-        flex-direction: column;
-
-        @include max(600px) {
-          padding: 1.6rem;
-        }
-      }
-
-      &-main-wrapper {
-        border-radius: 1.6rem;
-
-        @include max(600px) {
-          border-radius: 0.8rem;
-        }
-      }
-
-      &-over {
-        overflow: hidden;
-      }
-    }
-
-    &-body {
-      margin-top: 1.6rem;
-      margin-right: -0.8rem;
-      padding-right: 0.8rem;
-      flex: 1;
-      overflow-y: auto;
-
-      &::-webkit-scrollbar {
-        width: 0.2rem;
-      }
-    }
-  }
-  &-printf {
-    .popup-over {
-      max-height: 95vh;
-    }
-    .popup-main {
-      width: 100%;
-      max-width: 100%;
-      background: #fff;
-
-      &-wrapper {
-        border-radius: 0;
-        max-width: 123rem;
-
-        margin: 0 auto;
-      }
-    }
+  &-setup {
     .popup-wrapper {
-      padding: 4rem 1.5rem;
+      padding: 4rem;
+      border-radius: 1rem;
+      border: 0.1rem solid #edf2f2;
+      background: #fff;
     }
-    &-row {
-      @include max(900px) {
-        flex-direction: column-reverse;
-        .col {
-          width: 100%;
-        }
-      }
-    }
-    &-ctr {
-      margin-top: 4.5rem;
+    &-main {
       .igr {
-        @include mid-flex;
-        gap: 1.6rem;
+        margin-top: 4.8rem;
+        margin-bottom: 3.2rem;
+        &-py {
+          padding: 4rem 2.4rem;
+          border-radius: 1rem;
+          background: #fff;
+          @include flex;
+          justify-content: space-between;
+          align-items: center;
+          box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.5);
+        }
+        &-head {
+          @include flex;
+          justify-content: space-between;
+          flex-direction: column;
+          max-width: 38rem;
+          .t-text {
+            @include fz-24;
+            font-weight: 700;
+            margin-bottom: 2.4rem;
+            color: $color-pri;
+          }
+          .t-txt {
+            @include fz-16;
+            color: #606769;
+          }
+        }
       }
     }
     &-check {
-      @include mid-flex;
-    }
-    &-wrap {
-      margin-top: 8rem;
-      @include max(900px) {
-        margin-top: 4rem;
+      @include flex;
+      flex-wrap: wrap;
+      gap: 2.4rem;
+      margin-bottom: 4.8rem;
+      &-it {
+        width: calc(50% - 1.2rem);
       }
     }
-    &-image {
-      .inner {
-        @include imgPd(498, 588);
-        border-radius: 2rem;
-        img {
-          @include imgCover;
-        }
+    &-tlink {
+      text-align: center;
+      .t-link {
+        @include fz-16;
+        color: $color-pri;
+        font-weight: 600;
       }
+    }
+
+    &-btn {
+      margin-top: 4rem;
     }
   }
-  &-fill {
-    .popup-main {
-      width: 84rem;
-    }
-    &-dcor {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 26%;
-      z-index: 1;
-      img {
-        width: 100%;
-        display: block;
-      }
-    }
-    .popup-wrapper {
-      min-height: 50vh;
-      @include flex;
-      flex-direction: column;
-      justify-content: center;
-      background: linear-gradient(
-          180deg,
-          #fffef9 12.65%,
-          rgba(255, 249, 249, 0) 98.81%
-        ),
-        #fed7d7;
-    }
-    &-wrapper {
-      width: 50rem;
-      max-width: 100%;
-      margin: 0 auto 4rem;
-    }
-    &-flex {
-      @include flex;
-      margin: 0 -5rem;
-      @include max(768px) {
-        margin: 0 -1.2rem;
-      }
-    }
-    &-col {
-      padding: 0 5rem;
-      width: 50%;
-      @include max(768px) {
-        padding: 0 1.2rem;
-      }
-    }
-    &-box {
-      .t-text {
-        @include fz-24;
-        font-weight: 700;
-        color: $color-text;
-      }
-    }
-    &-options {
-      margin-top: 1.4rem;
-      @include flex;
-      flex-direction: column;
-      row-gap: 2.4rem;
-    }
-    &-item {
-      .recheck-item {
-        justify-content: space-between;
-      }
-      .recheck-text {
-        margin-left: 0;
-      }
+}
+.chart-circle {
+  position: relative;
+  .tag {
+    position: absolute;
+    @include mid;
+    color: $color-pri;
+    font-weight: 700;
+    font-size: 2rem;
+    @include flex;
+    align-items: center;
+
+    &::after {
+      content: "%";
+      display: inline-block;
+      font-size: inherit;
+      color: inherit;
     }
   }
 }

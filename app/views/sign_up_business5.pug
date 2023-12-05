@@ -1,0 +1,23 @@
+extends layout/layout
+
+block vars
+    -title = 'Software used'
+    -bodyClass = ''
+
+block container 
+   +breadCrumb(["Verify phone","Business name","Service","Team size","Location","Software used","Know from where"])
+   section.sec-subus.ss-pd.sec-subus-soft
+      .container 
+         .subus 
+            .subus-wrap 
+               .subus-head 
+                  .head-title.t-center 
+                     +tts("Which software are you currently using ?","If you looking to switch, we can help speed up your business set up and import your data into your new NAILTECHUB account.")
+               .subus-block
+                  form(action="")
+                     .subus-soft-gr.recheck-block
+                        +check("Lorem ipsum","")
+                        +check("Lorem ipsum","")
+                        +check("Lorem ipsum","")
+                        +check("Others","")
+                     +Btn("Next step","button","center")

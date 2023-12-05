@@ -1,0 +1,24 @@
+extends layout/layout
+
+block vars
+    -title = 'Know from where'
+    -bodyClass = ''
+
+block container 
+   +breadCrumb(["Verify phone","Business name","Service","Team size","Location","Software used","Know from where"])
+   section.sec-subus.ss-pd.sec-subus-know
+      .container 
+         .subus 
+            .subus-wrap 
+               .subus-head 
+                  .head-title.t-center 
+                     h2.t-title-second 
+                        | How did you hear about NAILTECHHUB
+               .subus-block
+                  form(action="")
+                     .subus-know-gr.recheck-block
+                        +check("Instagram","")
+                        +check("Facebook","")
+                        +check("Youtube","")
+                        +check("Others","")
+                     +Btn("Done","button","center")
