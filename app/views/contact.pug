@@ -1,0 +1,100 @@
+extends layout/layout
+
+block vars
+   -title = 'Contact'
+   -bodyClass = 'page-contact'
+
+block container 
+   +breadCrumb(["Projects","Marketing"])
+   section.bn 
+      .bg 
+         +img("h-bn.jpg")
+      .container 
+         .bn-wr
+            +tts("Contact & Support","We'd love to talk about how we can help you.")
+   section.contact 
+      .container 
+         .contact-wr
+            .contact-flex.row 
+               .contact-add.col
+                  .wrapper 
+                     .contact-add-line 
+                        +img("h-ic-pin.svg")
+                        span.txt 
+                           span.txt-name Address
+                           span.txt-val  3EC Phuc Loc Tho Center, Orange, California, USA
+                     .contact-add-line 
+                        +img("h-ic-phone.svg")
+                        span.txt 
+                           span.txt-name Phone
+                           span.txt-val +(0) 392 94 03 01
+                     .contact-add-line 
+                        +img("h-ic-mail.svg")
+                        span.txt 
+                           span.txt-name Email
+                           span.txt-val SupportNAILTECHUB@gmail.com
+               .contact-content.col
+                  .wrapper 
+                     .contact-form 
+                        .head
+                           +tts("Tell us your story","Whether you have questions or you would just like to say hello, contact us.")
+                        form(action="") 
+                           .form-list.row 
+                              .form-ip.col 
+                                 span.text Your name
+                                 input(type="text",placeholder="Enter your name")
+                              .form-ip.col 
+                                 span.text Email
+                                 input(type="text",placeholder="Enter your email")
+                              .form-ip.col 
+                                 span.text Messages
+                                 textarea(name="", placeholder="Description") 
+                           +Btn("Send now","button","full")
+         .contact-map 
+            .contact-map-inner 
+               iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2654293242267!2d106.6535495758385!3d10.790971358923679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ecb2f6e97fb%3A0x45c50d9a76a79124!2zMTA3My8yMyDEkC4gQ8OhY2ggTeG6oW5nIFRow6FuZyA4LCBQaMaw4budbmcgNywgVMOibiBCw6xuaCwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1701337708658!5m2!1svi!2s', width='600', height='450', style='border:0;', allowfullscreen='', loading='lazy', referrerpolicy='no-referrer-when-downgrade')               
+         .contact-ask.ss-pd
+            .contact-ask-wr
+               .head.t-center
+                  +tts("Frequently Asked Questions","Lorem ipsum dolor sit amet, consectetur.")
+               .contact-ask-cl.collapse-block 
+                  .contact-ask-cl-item.collapse-item 
+                     .contact-ask-cl-head.collapse-head
+                        span.txt What methods of payments are supported?
+                        span.ic 
+                           i.fa-solid.fa-plus                           
+                           i.fa-solid.fa-minus
+                     .conact-ask-cl-body.collapse-body
+                        |Cras vitae ac nunc orci. Purus amet tortor non at phasellus ultricies hendrerit. Eget a, sit morbi nunc sit id massa. Metus, scelerisque volutpat nec sit vel donec. Sagittis, id volutpat erat vel. 
+                  .contact-ask-cl-item.collapse-item 
+                     .contact-ask-cl-head.collapse-head
+                        span.txt Can I cancel at anytime?
+                        span.ic 
+                           i.fa-solid.fa-plus                           
+                           i.fa-solid.fa-minus
+                     .contact-ask-cl-body.collapse-body
+                        |Cras vitae ac nunc orci. Purus amet tortor non at phasellus ultricies hendrerit. Eget a, sit morbi nunc sit id massa. Metus, scelerisque volutpat nec sit vel donec. Sagittis, id volutpat erat vel. 
+                  .contact-ask-cl-item.collapse-item 
+                     .contact-ask-cl-head.collapse-head
+                        span.txt How do I get a receipt for my purchase?
+                        span.ic 
+                           i.fa-solid.fa-plus                           
+                           i.fa-solid.fa-minus
+                     .contact-ask-cl-body.collapse-body
+                        |Cras vitae ac nunc orci. Purus amet tortor non at phasellus ultricies hendrerit. Eget a, sit morbi nunc sit id massa. Metus, scelerisque volutpat nec sit vel donec. Sagittis, id volutpat erat vel. 
+                  .contact-ask-cl-item.collapse-item 
+                     .contact-ask-cl-head.collapse-head
+                        span.txt Which license do I need?
+                        span.ic 
+                           i.fa-solid.fa-plus                           
+                           i.fa-solid.fa-minus
+                     .contact-ask-cl-body.collapse-body
+                        |Cras vitae ac nunc orci. Purus amet tortor non at phasellus ultricies hendrerit. Eget a, sit morbi nunc sit id massa. Metus, scelerisque volutpat nec sit vel donec. Sagittis, id volutpat erat vel. 
+                  .contact-ask-cl-item.collapse-item 
+                     .contact-ask-cl-head.collapse-head
+                        span.txt How do I get access to a theme I purchased?
+                        span.ic 
+                           i.fa-solid.fa-plus                           
+                           i.fa-solid.fa-minus
+                     .contact-ask-cl-body.collapse-body
+                        |Cras vitae ac nunc orci. Purus amet tortor non at phasellus ultricies hendrerit. Eget a, sit morbi nunc sit id massa. Metus, scelerisque volutpat nec sit vel donec. Sagittis, id volutpat erat vel. 

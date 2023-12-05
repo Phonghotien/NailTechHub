@@ -27,6 +27,7 @@ import GsapModule from "./module/GsapModule.js";
 import CountDownModule from "./module/CountDownModule.js";
 import RangeModule from "./module/RangeModule.js";
 import ChartModule from "./module/ChartModule.js";
+import QuhuModule from "./module/QuhuModule.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   // Animation
@@ -69,4 +70,5 @@ window.addEventListener("DOMContentLoaded", () => {
   RangeModule();
   ScrollTriggerModule();
   ChartModule();
+  QuhuModule();
 });
