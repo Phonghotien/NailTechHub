@@ -1,0 +1,49 @@
+extends layout/layout
+
+block vars
+   -title = 'Policy'
+   -bodyClass = 'page-policy'
+
+block container 
+   +breadCrumb(["Projects","Marketing"])
+   section.bn 
+      .bg 
+         +img("h-bn.jpg")
+      .container 
+         .bn-wr
+            +tts("Contact & Support","We'd love to talk about how we can help you.")
+   section.policy 
+      .container
+         .policy-wr.ss-pd
+            .policy-flex.row 
+               .policy-side.col.col-3 
+                  .wrapper 
+                     ul.policy-list.scrollContainer 
+                        li.policy-item.buttons 
+                           a(href="#pp").policy-link  Privacy Policy
+                        li.policy-item.buttons 
+                           a(href="#tos").policy-link  Terms of Service
+                        li.policy-item.buttons 
+                           a(href="#tp").policy-link  Transparent Pricing
+                        li.policy-item.buttons 
+                           a(href="#sp").policy-link  Secure Payments
+                        li.policy-item.buttons 
+                           a(href="#cr").policy-link  Cancellation & Rescheduling
+               .policy-main.col.col-9
+                  .wrapper.mona-content    
+                     h3(class="heading", id="pp") Privacy Policy
+                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus nascetur morbi nisl, mi, in semper metus porttitor non. Augue nunc amet fringilla sit. Fringilla eget arcu sodales sed a, parturient fermentum amet scelerisque. Amet purus urna, dictumst aliquet aliquam natoque non, morbi pretium. Integer amet fermentum nibh viverra mollis consectetur arcu, ultrices dolor. Gravida purus arcu viverra eget. Aliquet tincidunt dignissim aliquam tempor nec id. Habitant suscipit sit semper duis odio amet, at.
+                     p Massa ultricies a arcu velit eget gravida purus ultrices eget. Orci, fames eu facilisi justo. Lacus netus a at sed justo vel leo leo pellentesque. Nulla ut laoreet luctus cum turpis et amet ac viverra. Vitae neque orci dui eu ac tincidunt. Egestas placerat egestas netus nec velit gravida consectetur laoreet vitae. Velit sed enim habitant habitant non diam. Semper tellus turpis tempus ac leo tempor. Ultricies amet, habitasse adipiscing bibendum consequat amet, sed. Id convallis suspendisse vitae, lacinia mattis cursus montes, dui. Tortor lobortis dignissim eget egestas. Eget enim auctor nunc eget mattis sollicitudin senectus diam. Tincidunt morbi egestas dignissim eget id aliquam. 
+                     h3(class="heading", id="tos") Terms of Service
+                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus nascetur morbi nisl, mi, in semper metus porttitor non. Augue nunc amet fringilla sit. Fringilla eget arcu sodales sed a, parturient fermentum amet scelerisque. Amet purus urna, dictumst aliquet aliquam natoque non, morbi pretium. Integer amet fermentum nibh viverra mollis consectetur arcu, ultrices dolor. Gravida purus arcu viverra eget. Aliquet tincidunt dignissim aliquam tempor nec id. Habitant suscipit sit semper duis odio amet, at.
+                     p Massa ultricies a arcu velit eget gravida purus ultrices eget. Orci, fames eu facilisi justo. Lacus netus a at sed justo vel leo leo pellentesque. Nulla ut laoreet luctus cum turpis et amet ac viverra. Vitae neque orci dui eu ac tincidunt. Egestas placerat egestas netus nec velit gravida consectetur laoreet vitae. Velit sed enim habitant habitant non diam. Semper tellus turpis tempus ac leo tempor. Ultricies amet, habitasse adipiscing bibendum consequat amet, sed. Id convallis suspendisse vitae, lacinia mattis cursus montes, dui. Tortor lobortis dignissim eget egestas. Eget enim auctor nunc eget mattis sollicitudin senectus diam. Tincidunt morbi egestas dignissim eget id aliquam. 
+                     h3(class="heading", id="tp") Transparent Pricing
+                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus nascetur morbi nisl, mi, in semper metus porttitor non. Augue nunc amet fringilla sit. Fringilla eget arcu sodales sed a, parturient fermentum amet scelerisque. Amet purus urna, dictumst aliquet aliquam natoque non, morbi pretium. Integer amet fermentum nibh viverra mollis consectetur arcu, ultrices dolor. Gravida purus arcu viverra eget. Aliquet tincidunt dignissim aliquam tempor nec id. Habitant suscipit sit semper duis odio amet, at.
+                     p Massa ultricies a arcu velit eget gravida purus ultrices eget. Orci, fames eu facilisi justo. Lacus netus a at sed justo vel leo leo pellentesque. Nulla ut laoreet luctus cum turpis et amet ac viverra. Vitae neque orci dui eu ac tincidunt. Egestas placerat egestas netus nec velit gravida consectetur laoreet vitae. Velit sed enim habitant habitant non diam. Semper tellus turpis tempus ac leo tempor. Ultricies amet, habitasse adipiscing bibendum consequat amet, sed. Id convallis suspendisse vitae, lacinia mattis cursus montes, dui. Tortor lobortis dignissim eget egestas. Eget enim auctor nunc eget mattis sollicitudin senectus diam. Tincidunt morbi egestas dignissim eget id aliquam. 
+                     h3(class="heading", id="sp") Secure Payments
+                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus nascetur morbi nisl, mi, in semper metus porttitor non. Augue nunc amet fringilla sit. Fringilla eget arcu sodales sed a, parturient fermentum amet scelerisque. Amet purus urna, dictumst aliquet aliquam natoque non, morbi pretium. Integer amet fermentum nibh viverra mollis consectetur arcu, ultrices dolor. Gravida purus arcu viverra eget. Aliquet tincidunt dignissim aliquam tempor nec id. Habitant suscipit sit semper duis odio amet, at.
+                     p Massa ultricies a arcu velit eget gravida purus ultrices eget. Orci, fames eu facilisi justo. Lacus netus a at sed justo vel leo leo pellentesque. Nulla ut laoreet luctus cum turpis et amet ac viverra. Vitae neque orci dui eu ac tincidunt. Egestas placerat egestas netus nec velit gravida consectetur laoreet vitae. Velit sed enim habitant habitant non diam. Semper tellus turpis tempus ac leo tempor. Ultricies amet, habitasse adipiscing bibendum consequat amet, sed. Id convallis suspendisse vitae, lacinia mattis cursus montes, dui. Tortor lobortis dignissim eget egestas. Eget enim auctor nunc eget mattis sollicitudin senectus diam. Tincidunt morbi egestas dignissim eget id aliquam. 
+                     h3(class="heading", id="cr") Cancellation & Rescheduling
+                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus nascetur morbi nisl, mi, in semper metus porttitor non. Augue nunc amet fringilla sit. Fringilla eget arcu sodales sed a, parturient fermentum amet scelerisque. Amet purus urna, dictumst aliquet aliquam natoque non, morbi pretium. Integer amet fermentum nibh viverra mollis consectetur arcu, ultrices dolor. Gravida purus arcu viverra eget. Aliquet tincidunt dignissim aliquam tempor nec id. Habitant suscipit sit semper duis odio amet, at.
+                     p Massa ultricies a arcu velit eget gravida purus ultrices eget. Orci, fames eu facilisi justo. Lacus netus a at sed justo vel leo leo pellentesque. Nulla ut laoreet luctus cum turpis et amet ac viverra. Vitae neque orci dui eu ac tincidunt. Egestas placerat egestas netus nec velit gravida consectetur laoreet vitae. Velit sed enim habitant habitant non diam. Semper tellus turpis tempus ac leo tempor. Ultricies amet, habitasse adipiscing bibendum consequat amet, sed. Id convallis suspendisse vitae, lacinia mattis cursus montes, dui. Tortor lobortis dignissim eget egestas. Eget enim auctor nunc eget mattis sollicitudin senectus diam. Tincidunt morbi egestas dignissim eget id aliquam. 
+                  

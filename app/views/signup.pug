@@ -1,0 +1,70 @@
+extends layout/layout
+
+block vars
+    -title = 'Sign Up'
+    -bodyClass = 'page-sign'
+
+block container 
+  section.sign 
+    .sign-flex 
+      .sign-form.sign-up
+        .sign-form-inner
+          .wrapper 
+            p.sign-sub Welcome!
+            h2.sign-tt Sign up 
+            form(action="")
+              .form-list.row 
+                .form-ip.col 
+                  span.text Email
+                  input(type="text", placeholder="Enter your email")
+                .form-ip.col 
+                  span.text User name
+                  input(type="text", placeholder="Enter your user name")
+                .form-ip.col 
+                  span.text Phone number
+                  .form-ip-flex
+                    .form-ip-select 
+                      select(name="",class="re-select-main", placeholder="")
+                        option(value="1") +84   
+                        option(value="1") +84   
+                        option(value="1") +84   
+                        option(value="1") +84   
+                    input(type="text", placeholder="Enter your phone number")
+                .form-ip.col 
+                  span.text Email
+                  input(type="text", placeholder="Enter your email")
+                .form-ip.col 
+                  span.text Password
+                  input(type='password', placeholder='Enter your password')
+                  i.seepassJS.fas.fa-eye
+                .form-ip.col 
+                  span.text Confirm password
+                  input(type='password', placeholder='Confirm your password')
+                  i.seepassJS.fas.fa-eye
+              .sign-bot 
+                label.sign-check 
+                  input(type="checkbox",hidden)
+                  span.sqr 
+                  span.txt 
+                    |I agree to the 
+                    a(href="").bold Privacy Policy, Terms of Use 
+                    | and 
+                    a(href="").bold Terms of Service
+                label.sign-check 
+                  input(type="checkbox",hidden)
+                  span.sqr 
+                  span.txt I agree to receive marketing notifications with offers and news
+              +Btn("Register","button","full")
+              .sign-note 
+                |Already have an account? 
+                a.sign-note-link(href="") Login 
+              a(href="").sign-gg-btn 
+                +img("h-ic-gg.svg")
+                span.txt Login with Google
+          .sign-note.two 
+            |Have a business account? 
+            a.sign-note-link(href="") Login as a professional
+      .sign-img
+        .wrapper 
+          .img
+            +img("h-sign-up.jpg")

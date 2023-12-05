@@ -1,0 +1,233 @@
+extends layout/layout
+
+block vars
+   -title = 'About us'
+   -bodyClass = 'page-ab'
+
+block container 
+   +breadCrumb(["Home","About us"])
+   section.ab
+      .ab-story.ss-pd  
+         .container 
+            .ab-story-wr 
+               .ab-story-ctn
+                  .inner
+                     p.ab-story-sub Redefining Nail Artistry for the Modern World 
+                     +ttp("About Us - The NailTechHub Story","Welcome to NailTechHub, the leading nail salon search platform for those who appreciate the art of nail care. Allow us to share our story and mission with you.")
+               .ab-story-img.row
+                  .ab-story-left.col
+                     .ab-story-item 
+                        .img 
+                           .img-inner.load-img 
+                              +img("h-ab-1.jpg")
+                        .img 
+                           .img-inner.load-img 
+                              +img("h-ab-2.jpg")
+                  .ab-story-mid.col 
+                     .ab-story-item 
+                        .img 
+                           .img-inner.load-img 
+                              +img("h-ab-3.jpg")
+                  .ab-story-right.col 
+                     .ab-story-item 
+                        .img 
+                           .img-inner.load-img 
+                              +img("h-ab-4.jpg")
+                        .img 
+                           .img-inner.load-img 
+                              +img("h-ab-5.jpg")
+      .ab-jn.ss-pd 
+         .container 
+            .ab-jn-wr 
+               .head.t-center 
+                  +ttp("Our Journey, Purpose, and Inspiration","")
+               .ab-jn-flex.row 
+                  .ab-jn-img.col 
+                     .ab-jn-item.row 
+                        .ab-jn-left.col
+                           .img 
+                              .img-inner 
+                                 +img("h-jn-1.jpg")
+                        .ab-jn-right.col
+                           .img 
+                              .img-inner 
+                                 +img("h-jn-2.jpg")
+                           .img 
+                              .img-inner 
+                                 +img("h-jn-3.jpg")
+                  .ab-jn-ctn.col 
+                     .inner 
+                        +tts("NailTechHub's Journey, Purpose, and Inspiration","NailTechHub was born out of an unwavering passion for the art of nail care. We understood that perfect nails can enhance the beauty and confidence of every individual. However, finding a high-quality, reliable, and convenient nail technician isn't always easy. That's why we decided to create NailTechHub.Our mission is to bring about change and improvement in the nail care industry. We believe that nail care is not just a daily routine but an art form. We aim to provide a platform where people can easily access the services of talented nail technicians and experience the confidence and beauty they deserve.")
+      .ab-miss.ss-pd 
+         .container 
+            .head.t-center 
+               +tts("Mission and Vision","Our mission at NailTechHub is to connect you with the very best nail technicians, making it easier than ever to find the perfect nail services. We utilize technology to ensure you can schedule appointments, access detailed service information, and experience high-quality services in a convenient and reliable manner. Our vision is to become the leading nail salon search platform where people can connect with trustworthy and skilled professionals.")
+            .swiper-container.row 
+               .swiper
+                  .swiper-wrapper
+                     .swiper-slide.col 
+                        .ab-miss-img 
+                           .img
+                              +img("h-miss-1.jpg")
+                     .swiper-slide.col 
+                        .ab-miss-img 
+                           .img
+                              +img("h-miss-2.jpg")
+                     .swiper-slide.col 
+                        .ab-miss-img 
+                           .img
+                              +img("h-miss-3.jpg")
+      .ab-jn.revert.ss-pd 
+         .container 
+            .ab-jn-wr 
+               .ab-jn-flex.row 
+                  .ab-jn-img.col 
+                     .ab-jn-item.row 
+                        .ab-jn-left.col
+                           .img 
+                              .img-inner 
+                                 +img("h-jn-4.jpg")
+                        .ab-jn-right.col
+                           .img 
+                              .img-inner 
+                                 +img("h-jn-5.jpg")
+                           .img 
+                              .img-inner 
+                                 +img("h-jn-6.jpg")
+                  .ab-jn-ctn.col 
+                     .inner 
+                        +tts("Commitment to Quality and Innovation","We are committed to providing you with high-quality nail services and bringing innovation to the nail care industry. Every technician featured on the NailTechHub platform undergoes a stringent selection process to ensure you receive the best service and the perfect nails you desire.")
+      .ab-sl.ss-pd 
+         .container 
+            .ab-sl-flex.row 
+               .ab-sl-left.col.col-6 
+                  .wrapper 
+                     +tts("Criteria for Selecting Nail Technicians","We select nail technicians based on their knowledge, skills, and experience. Only the most outstanding nail technicians are connected with customers. We believe that you deserve the best service and the perfect nails you desire.")
+                     .ab-sl-thumb 
+                        .swiper-container.row 
+                           .swiper 
+                              .swiper-wrapper
+                                 -
+                                    var arrs = [
+                                       "h-sl-1.jpg",
+                                       "h-sl-2.jpg",
+                                       "h-sl-3.jpg",
+                                    ]
+                                 each val in arrs 
+                                    .swiper-slide.col 
+                                       .ab-sl-item 
+                                          .inner 
+                                             .img 
+                                                .img-inner 
+                                                   +img(val)
+               .ab-sl-right.col.col-6 
+                  .inner 
+                     .ab-sl-main 
+                        .swiper-container.row 
+                           .swiper 
+                              .swiper-wrapper
+                                 -
+                                    var arrs = [
+                                       "h-sl-1.jpg",
+                                       "h-sl-2.jpg",
+                                       "h-sl-3.jpg",
+                                    ] 
+                                 each val in arrs
+                                    .swiper-slide.col
+                                       .ab-sl-item
+                                          .inner 
+                                             .img 
+                                                a.img-inner(href="")
+                                                   +img(val) 
+                                             .info 
+                                                h3 
+                                                   a.info-name Sophia Johnson
+                                                .star
+                                                   .star-list
+                                                      .star-flex.star-empty
+                                                         img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                         img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                         img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                         img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                         img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                      .star-flex.star-filter(style='width: 80%;')
+                                                         img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                         img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                         img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                         img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                         img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                p.info-des 
+                                                   |With over 10 years in the beauty industry, Sophia is a seasoned Nail and Hair Stylist known for her innovative and personalized approach. She has a knack for creating fresh, elegant looks that enhance her clients' natural beauty. Sophia continuously updates her skills to stay current with the latest trends and techniques in nail design and hair styling.
+                        .swiper-control.posi.midle
+                           .swiper-control-btn.swiper-prev
+                              i(class="fa-regular fa-arrow-left")
+                           .swiper-control-btn.swiper-next
+                              i(class="fa-regular fa-arrow-right")
+      .ab-ft.ss-pd-b 
+         .container 
+            .ab-ft-flex.row 
+               .ab-ft-item.col 
+                  .inner 
+                     +img("h-ic-qlt.svg")
+                     p.tt Prestige and quality
+                     p.des Customers will be served with dedication and quality
+               .ab-ft-item.col 
+                  .inner 
+                     +img("h-ic-brain.svg")
+                     p.tt High level & Creativity
+                     p.des We are committed to using quality products and the most advanced technology
+               .ab-ft-item.col 
+                  .inner 
+                     +img("h-ic-always.svg")
+                     p.tt Always at the center
+                     p.des We create a friendly and comfortable space so you can completely relax
+      .ab-cn.ss-pd 
+         .container 
+            .ab-cn-flex.row 
+               .ab-cn-left.col.col-7
+                  .inner 
+                     .ab-cn-tablet 
+                        .ab-cn-tablet-in 
+                           +img("h-ip-big.png")
+               .ab-cn-right.col.col-6 
+                  .inner
+                     +tts("Connecting Through Technology","We use technology to efficiently connect you with the nail technicians. On the NailTechHub platform, you can easily book appointments, view service details, and make convenient payments. This helps you save time and experience the best nail care.")
+                  .ab-cn-tablet 
+                     .ab-cn-tablet-in 
+                        +img("h-ip-small.png")
+      .ab-fn.ss-pd 
+         .container 
+            .head
+               .ab-fn-desc.t-center 
+                  span.bold Finally
+                  |, we want to express our sincere gratitude to the customers and technicians who have trusted and joined our platform. We deeply appreciate your contributions and support, and we will continually strive to provide you with the best nail care experience.
+         .ab-fn-wr
+            .ab-fn-flex.row
+               .ab-fn-item.col
+                  .img 
+                     +img("h-fn-1.jpg")
+               .ab-fn-item.col
+                  .img 
+                     +img("h-fn-2.jpg")
+               .ab-fn-item.col
+                  .img 
+                     +img("h-fn-3.jpg")
+               .ab-fn-item.col
+                  .img 
+                     +img("h-fn-4.jpg")
+               .ab-fn-item.col
+                  .img 
+                     +img("h-fn-5.jpg")
+      .ab-thanks.ss-pd 
+         .container 
+            h3.ab-thanks-tt Thank You!
+            .ab-thanks-wr.row
+               .ab-thanks-ctn.col
+                  .wrapper(data-text="NAILTECHHUB") 
+                     +tts("If you'd like to learn more about the services","Please visit our Services page")
+                     +Btn("Services","","")
+               .ab-thanks-model.col 
+                  .img 
+                     +img("h-model.png") 
+
+         
