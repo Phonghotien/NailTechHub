@@ -20,7 +20,7 @@ block container
                                  .form-list.row 
                                  .form-ip.col 
                                     span.text Business name
-                                    input(type="text", placeholder="Mona's Nail & Spa").required
+                                    input(type="text", placeholder="Mona's Nail & Spa")
                                  .form-ip.col 
                                     span.text Website (Optional)
                                     input(type="text", placeholder="www.yoursite.com")
@@ -77,7 +77,7 @@ block container
                                           input(type="text", placeholder="California")
                                  .form-ip.col 
                                     span.text Address
-                                    input(type="text", placeholder="Phuc Loc Tho Center, Bosa")
+                                    input(type="text", placeholder="Phuc Loc Tho Center, Bosa").required
                                  .form-ip.col 
                                     span.text District
                                     input(type="text", placeholder="Orange")
@@ -87,14 +87,14 @@ block container
                                  .form-ip.col 
                                     span.text Country 
                                     .select-ful 
-                                       select(name="",class="re-select-main", placeholder="Enter your country")
+                                       select(name="" placeholder="Enter your country")
                                           option(value="1") +84   
                                           option(value="1") +84   
                                           option(value="1") +84 
                                  .form-ip.col 
                                     span.text Post code 
                                     .select-ful 
-                                       select(name="",class="re-select-main", placeholder="Enter your post code")
+                                       select(name="" placeholder="Enter your post code")
                                           option(value="1") +84   
                                           option(value="1") +84   
                                           option(value="1") +84 
@@ -107,19 +107,10 @@ block container
                                        a(href="").fw-6 Privacy Policy, Terms of Use 
                                        | and 
                                        a(href="").fw-6 Terms of Service
-                                 label.sign-check 
+                                 label.sign-check.sign-check-hidden 
                                     input(type="checkbox",hidden)
                                     span.sqr 
                                     span.txt.t15 I agree to receive marketing notifications with offers and news
-                  .sec-subus.sec-subus-location
-                     .subus 
-                        .subus-wrap 
-                           .subus-head 
-                              .head-title.t-center 
-                                 +tts("Set your location","Add your business location so your clients can easily find you")
-                           .subus-block
-                              .subus-location-gr.recheck-block
-                                 +check("I don’t have a business address (mobile and online services only)","")
                .wizard-step(data-title="Software used" data-type="form")
                   .sec-subus.sec-subus-soft
                      .subus 
