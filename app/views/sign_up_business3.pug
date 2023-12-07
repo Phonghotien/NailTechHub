@@ -1,0 +1,62 @@
+extends layout/layout
+
+block vars
+    -title = 'Location'
+    -bodyClass = ''
+
+block container 
+   +breadCrumb(["Verify phone","Business name","Service","Team size","Location","Software used","Know from where"])
+   section.sec-subus.ss-pd.sec-subus-location-form
+      .container 
+         .subus 
+            .subus-wrap 
+               .subus-head 
+                  .head-title.t-center 
+                     +tts("Set your location","Add your business location so your clients can easily find you")
+               .subus-block
+                  form(action="")
+                     .form-list.row 
+                        .form-ip.col 
+                           span.text Where’s your business located?
+                           .ip-pos
+                              .igr
+                                 span.icon 
+                                    +img("icon-gps.svg")
+                                 input(type="text", placeholder="California")
+                        .form-ip.col 
+                           span.text Address
+                           input(type="text", placeholder="Phuc Loc Tho Center, Bosa")
+                        .form-ip.col 
+                           span.text District
+                           input(type="text", placeholder="Orange")
+                        .form-ip.col 
+                           span.text City
+                           input(type="text", placeholder="Little Saigon")
+                        .form-ip.col 
+                           span.text Country 
+                           .select-ful 
+                              select(name="",class="re-select-main", placeholder="Enter your country")
+                                 option(value="1") +84   
+                                 option(value="1") +84   
+                                 option(value="1") +84 
+                        .form-ip.col 
+                           span.text Post code 
+                           .select-ful 
+                              select(name="",class="re-select-main", placeholder="Enter your post code")
+                                 option(value="1") +84   
+                                 option(value="1") +84   
+                                 option(value="1") +84 
+                     .sign-bot 
+                        label.sign-check 
+                           input(type="checkbox",hidden)
+                           span.sqr 
+                           span.txt.t15 
+                              |I agree to the 
+                              a(href="").fw-6 Privacy Policy, Terms of Use 
+                              | and 
+                              a(href="").fw-6 Terms of Service
+                        label.sign-check 
+                           input(type="checkbox",hidden)
+                           span.sqr 
+                           span.txt.t15 I agree to receive marketing notifications with offers and news
+                     +Btn(" Next step","button","center")

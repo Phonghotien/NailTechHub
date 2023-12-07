@@ -52,6 +52,80 @@ header.hd(class=hdClass)
                   .hd-notice 
                      span.icon 
                         +img("hd-notice.svg")
+                     .hd-notice-overlay
+                     .hd-notice-pos 
+                        .hd-notice-py.tabJS 
+                           .hd-notice-tab 
+                              .igr 
+                                 .hd-notice-ctr.tabBtn 
+                                    span.t-text 
+                                       | Booking
+                                 .hd-notice-ctr.tabBtn
+                                    span.t-text 
+                                       | Tips
+                           .hd-notice-bl 
+                              .hd-notice-panel.tabPanel
+                                 .hd-notice-ul 
+                                    each i in Array(3)
+                                       .hd-notice-li 
+                                          .hd-notice-in 
+                                             .igr 
+                                                span.icon-avt 
+                                                   +img("avt-acc.jpg")
+                                                .igrs 
+                                                   span.t-name 
+                                                      | Nelly Miller
+                                                   span.t-des 
+                                                      | Lorem Ipsum lorem ipsum
+                                             span.t-time 
+                                                | 2 min ago
+                                          span.icon-remove
+                                             i.fa-light.fa-xmark-large
+                                    .hd-notice-li 
+                                          .hd-notice-in 
+                                             .igr 
+                                                span.icon-avt 
+                                                   +img("icon-check-done.svg")
+                                                .igrs 
+                                                   span.t-name 
+                                                      | Congratulations
+                                                   span.t-des 
+                                                      | Lorem Ipsum lorem ipsum
+                                             span.t-time 
+                                                | 2 min ago
+                                          span.icon-remove
+                                             i.fa-light.fa-xmark-large
+                              .hd-notice-panel.tabPanel
+                                 .hd-notice-ul 
+                                    each i in Array(3)
+                                       .hd-notice-li 
+                                          .hd-notice-in 
+                                             .igr 
+                                                span.icon-avt 
+                                                   +img("avt-acc.jpg")
+                                                .igrs 
+                                                   span.t-name 
+                                                      | Sophia Johnson
+                                                   span.t-des 
+                                                      | +20$ from Nelly Miller for tips
+                                             span.t-time 
+                                                | 2 min ago
+                                          span.icon-remove
+                                             i.fa-light.fa-xmark-large
+                                    .hd-notice-li 
+                                          .hd-notice-in 
+                                             .igr 
+                                                span.icon-avt 
+                                                   +img("icon-check-done.svg")
+                                                .igrs 
+                                                   span.t-name 
+                                                      | Congratulations
+                                                   span.t-des 
+                                                      | Lorem Ipsum lorem ipsum
+                                             span.t-time 
+                                                | 2 min ago
+                                          span.icon-remove
+                                             i.fa-light.fa-xmark-large
                   .hd-search.hd-open-search 
                      span.icon 
                         +img("icon-search.svg")

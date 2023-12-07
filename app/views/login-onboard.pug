@@ -1,0 +1,35 @@
+extends layout/layout
+
+block vars
+   -title = 'Login Onboard'
+   -bodyClass = 'page-sign'
+
+block container
+   section.sign.sign-fix 
+    .sign-flex 
+      .sign-form
+         .sign-form-inner
+            .sign-onboard
+               .t-title-second.t-center
+                  | Sign up/login
+               .sign-onboard-gr 
+                  a(href="").sign-onboard-link
+                     .igr 
+                        span.t-text 
+                           | For everyone 
+                        span.t-txt 
+                           | Book salons and spas near you
+                     span.icon 
+                         i.fa-light.fa-arrow-right
+                  a(href="").sign-onboard-link
+                     .igr 
+                        span.t-text 
+                           | For business
+                        span.t-txt 
+                           | Manage and grow your business
+                     span.icon 
+                         i.fa-light.fa-arrow-right
+      .sign-img
+         .wrapper 
+            .img
+               +img("sign-onboard-img.jpg")

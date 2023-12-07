@@ -53,6 +53,7 @@ textarea {
   -moz-appearance: none;
   appearance: none;
   @include font-pri;
+  @include fz-16;
 }
 
 .main {
