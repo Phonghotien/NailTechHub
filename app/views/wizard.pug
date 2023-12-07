@@ -1,0 +1,149 @@
+extends layout/layout
+
+block vars
+    -title = 'Wizard Form'
+    -bodyClass = ''
+
+block container 
+   section.ss-pd
+      .container
+         form(action="" method="POST").wizard#formWizard
+            .wizard-content
+               .wizard-step(data-title="Business name" data-type="form")
+                  .sec-subus.sec-subus-name
+                     .subus
+                        .subus-wrap 
+                           .subus-head 
+                              .head-title.t-center 
+                                 +tts("What’s your business name?","This is the brand name your clients will see. Your billing and legal name can be added later.")
+                           .subus-block
+                                 .form-list.row 
+                                 .form-ip.col 
+                                    span.text Business name
+                                    input(type="text", placeholder="Mona's Nail & Spa").required
+                                 .form-ip.col 
+                                    span.text Website (Optional)
+                                    input(type="text", placeholder="www.yoursite.com")
+               .wizard-step(data-title="Service" data-type="form")
+                  .sec-subus
+                     .subus
+                        .subus-wrap 
+                           .subus-head 
+                              .head-title.t-center 
+                                 +tts("What service do you offer?","Choose your primary and up to 3 related service types")
+                           .subus-block 
+                              .subus-sls.recheck-block 
+                                 .subus-sls-row.row 
+                                    each i in Array(13)
+                                       .col.col-4 
+                                          .subus-sls-it.recheck-item 
+                                             input(type="checkbox").recheck-input
+                                             .igr 
+                                                span.icon 
+                                                   +img("nail-icon.svg")
+                                                span.t-text 
+                                                   | Nail services 1
+                                                .t-num
+                                                   span.t-tag
+                                                      | Primary
+               .wizard-step(data-title="Team size" data-type="form")
+                  .sec-subus.sec-subus-size
+                     .subus 
+                        .subus-wrap 
+                           .subus-head 
+                              .head-title.t-center 
+                                 +tts("What your team sizes?","This will help us set up your calendar correctly. You can have unlimited team members for free on NAILTECHHUB")
+                           .subus-block
+                              .subus-size-gr.recheck-block
+                                 +check("It’s just me","")
+                                 +check("2 -5 people","")
+                                 +check("6 -10 people","")
+                                 +check("11+ people","")
+               .wizard-step(data-title="Location" data-type="form")
+                  .sec-subus.sec-subus-location-form
+                     .subus 
+                        .subus-wrap 
+                           .subus-head 
+                              .head-title.t-center 
+                                 +tts("Set your location","Add your business location so your clients can easily find you")
+                           .subus-block
+                              .form-list.row 
+                                 .form-ip.col 
+                                    span.text Where’s your business located?
+                                    .ip-pos
+                                       .igr
+                                          span.icon 
+                                             +img("icon-gps.svg")
+                                          input(type="text", placeholder="California")
+                                 .form-ip.col 
+                                    span.text Address
+                                    input(type="text", placeholder="Phuc Loc Tho Center, Bosa")
+                                 .form-ip.col 
+                                    span.text District
+                                    input(type="text", placeholder="Orange")
+                                 .form-ip.col 
+                                    span.text City
+                                    input(type="text", placeholder="Little Saigon")
+                                 .form-ip.col 
+                                    span.text Country 
+                                    .select-ful 
+                                       select(name="",class="re-select-main", placeholder="Enter your country")
+                                          option(value="1") +84   
+                                          option(value="1") +84   
+                                          option(value="1") +84 
+                                 .form-ip.col 
+                                    span.text Post code 
+                                    .select-ful 
+                                       select(name="",class="re-select-main", placeholder="Enter your post code")
+                                          option(value="1") +84   
+                                          option(value="1") +84   
+                                          option(value="1") +84 
+                              .sign-bot 
+                                 label.sign-check 
+                                    input(type="checkbox",hidden)
+                                    span.sqr 
+                                    span.txt.t15 
+                                       |I agree to the 
+                                       a(href="").fw-6 Privacy Policy, Terms of Use 
+                                       | and 
+                                       a(href="").fw-6 Terms of Service
+                                 label.sign-check 
+                                    input(type="checkbox",hidden)
+                                    span.sqr 
+                                    span.txt.t15 I agree to receive marketing notifications with offers and news
+                  .sec-subus.sec-subus-location
+                     .subus 
+                        .subus-wrap 
+                           .subus-head 
+                              .head-title.t-center 
+                                 +tts("Set your location","Add your business location so your clients can easily find you")
+                           .subus-block
+                              .subus-location-gr.recheck-block
+                                 +check("I don’t have a business address (mobile and online services only)","")
+               .wizard-step(data-title="Software used" data-type="form")
+                  .sec-subus.sec-subus-soft
+                     .subus 
+                        .subus-wrap 
+                           .subus-head 
+                              .head-title.t-center 
+                                 +tts("Which software are you currently using ?","If you looking to switch, we can help speed up your business set up and import your data into your new NAILTECHUB account.")
+                           .subus-block
+                              .subus-soft-gr.recheck-block
+                                 +check("Lorem ipsum","")
+                                 +check("Lorem ipsum","")
+                                 +check("Lorem ipsum","")
+                                 +check("Others","")
+               .wizard-step(data-title="Know from where" data-type="form")
+                  .sec-subus.sec-subus-know
+                     .subus 
+                        .subus-wrap 
+                           .subus-head 
+                              .head-title.t-center 
+                                 h2.t-title-second 
+                                    | How did you hear about NAILTECHHUB
+                           .subus-block
+                              .subus-know-gr.recheck-block
+                                 +check("Instagram","")
+                                 +check("Facebook","")
+                                 +check("Youtube","")
+                                 +check("Others","")

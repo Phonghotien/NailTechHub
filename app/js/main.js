@@ -28,6 +28,7 @@ import CountDownModule from "./module/CountDownModule.js";
 import RangeModule from "./module/RangeModule.js";
 import ChartModule from "./module/ChartModule.js";
 import QuhuModule from "./module/QuhuModule.js";
+import WizardModule from "./module/WizardModule.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   // Animation
@@ -71,4 +72,5 @@ window.addEventListener("DOMContentLoaded", () => {
   ScrollTriggerModule();
   ChartModule();
   QuhuModule();
+  WizardModule();
 });
