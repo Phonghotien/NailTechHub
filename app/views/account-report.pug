@@ -1,0 +1,218 @@
+extends layout/layout
+
+block vars
+    -title = 'Report'
+    -bodyClass = ''
+    -hdClass='hd-account'
+
+block container 
+   +breadCrumb(["Management"])
+   .sec-acc.ss-pd
+      .container 
+         .acc 
+            .acc-wrap 
+               .acc-row.row 
+                  .acc-left.col.col-3
+                     .acc-control 
+                        .acc-info 
+                           .igr 
+                              .acc-info-image 
+                                 .inner.preview-img
+                                    +img("avt-acc.jpg")
+                                 label.icon-edit(for='up-file-avt')
+                                    span.icon
+                                       +img("icon-edit.svg")
+                                    input#up-file-avt.upload-image(hidden='' type='file')
+                              span.t16.fw-6.c-pri
+                                 | Excellent Nails
+                        .acc-ctrs 
+                           .acc-ctrs-list 
+                              a(href="").t-link.active
+                                 span.icon 
+                                    +img("icon-acc-link.svg")
+                                 span.t-text 
+                                    | Booth Information
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link2.svg")
+                                 span.t-text 
+                                    | Booking Management
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link4.svg")
+                                 span.t-text 
+                                    | Service Management
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link3.svg")
+                                 span.t-text 
+                                    | Employee Management
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link5.svg")
+                                 span.t-text 
+                                    | Report
+                        .acc-log
+                           +Btn("Logout","","full")
+                  .acc-right.col.col-9 
+                     .acc-prof 
+                        .acc-prof-head 
+                           .t-title 
+                              | Report
+                        .acc-rp 
+                           .acc-rb-boxs 
+                              .acc-rb-box 
+                                 .acc-rb-box-in 
+                                    .igr 
+                                       span.icon-rb 
+                                          +img("icon-rb.svg")
+                                       .igrs 
+                                          span.t-txt 
+                                             | Earning 
+                                          span.t32.fw-7.c-pri
+                                             | $198k
+                                          .t-gr
+                                             span.icon 
+                                                +img("icon-rb-arrow.svg")
+                                             span.t-text 
+                                                | 37.8%
+                                             span.t-txt2 
+                                                | this week
+                              .acc-rb-box 
+                                 .acc-rb-box-in 
+                                    .igr 
+                                       span.icon-rb 
+                                          +img("icon-rb2.svg")
+                                       .igrs 
+                                          span.t-txt 
+                                             | Tip 
+                                          span.t32.fw-7.c-pri
+                                             | $198k
+                              .acc-rb-box 
+                                 .acc-rb-box-in 
+                                    .igr 
+                                       span.icon-rb 
+                                          +img("icon-rb3.svg")
+                                       .igrs 
+                                          span.t-txt 
+                                             | Balance 
+                                          span.t32.fw-7.c-pri
+                                             | $198k
+                                          .t-gr
+                                             span.icon 
+                                                +img("icon-rb-arrow.svg")
+                                             span.t-text 
+                                                | 37.8%
+                                             span.t-txt2 
+                                                | this week
+                           .acc-fb 
+                              .acc-fb-row 
+                                 .acc-fb-left 
+                                    .acc-fb-py 
+                                       .acc-fb-head 
+                                          p.t-text
+                                             | Overview
+                                          span.t-txt 
+                                             | Daily Earning
+                                       .acc-fb-ovs 
+                                          .acc-fb-ov(style="--value:50") 
+                                             .inner 
+                                                .t-pos 
+                                                   span.icon 
+                                                      i.fa-light.fa-arrow-trend-up
+                                                   span.t-txt 
+                                                      | 50%
+                                             p.t-text 
+                                                | Mon
+                                          .acc-fb-ov(style="--value:20") 
+                                             .inner 
+                                                .t-pos 
+                                                   span.icon 
+                                                      i.fa-light.fa-arrow-trend-up
+                                                   span.t-txt 
+                                                      | 20%
+                                             p.t-text 
+                                                | Tue
+                                          .acc-fb-ov(style="--value:30") 
+                                             .inner 
+                                                .t-pos 
+                                                   span.icon 
+                                                      i.fa-light.fa-arrow-trend-up
+                                                   span.t-txt 
+                                                      | 30%
+                                             p.t-text 
+                                                | Wed
+                                          .acc-fb-ov(style="--value:100") 
+                                             .inner 
+                                                .t-pos 
+                                                   span.icon 
+                                                      i.fa-light.fa-arrow-trend-up
+                                                   span.t-txt 
+                                                      | 100%
+                                             p.t-text 
+                                                | Thu
+                                          .acc-fb-ov(style="--value:70") 
+                                             .inner 
+                                                .t-pos 
+                                                   span.icon 
+                                                      i.fa-light.fa-arrow-trend-up
+                                                   span.t-txt 
+                                                      | 70%
+                                             p.t-text 
+                                                | Fri
+                                          .acc-fb-ov(style="--value:80") 
+                                             .inner 
+                                                .t-pos 
+                                                   span.icon 
+                                                      i.fa-light.fa-arrow-trend-up
+                                                   span.t-txt 
+                                                      | 80%
+                                             p.t-text 
+                                                | Sat
+                                          .acc-fb-ov(style="--value:10") 
+                                             .inner 
+                                                .t-pos 
+                                                   span.icon 
+                                                      i.fa-light.fa-arrow-trend-up
+                                                   span.t-txt 
+                                                      | 10%
+                                             p.t-text 
+                                                | Sun
+   .popup.popup-setup(data-popup-id="popup-setup")
+      .popup-overlay
+      .popup-main
+         .popup-main-wrapper
+            .popup-over
+               .popup-wrapper
+                  .popup-setup-main
+                     .t-title.fw-7.t40 
+                        | Setup guide
+                     .igr 
+                        .igr-py
+                           .igr-head 
+                              p.t-text 
+                                 | Hi Duc, continue setting up your new account
+                              span.t-txt 
+                                 | 3 of 5 tasks completed
+                           .igr-chart 
+                              .chart-circle.chart-js(data-percent="80")
+                                 .tag 
+                                    | 0
+                     .popup-setup-check.recheck-block
+                        .popup-setup-check-it 
+                           +check("Add your business address","checkbox")
+                        .popup-setup-check-it 
+                           +check("Add your business website","checkbox")
+                        .popup-setup-check-it 
+                           +check("Set up your service list","checkbox")
+                        .popup-setup-check-it 
+                           +check("Set up your team members","checkbox")
+                        .popup-setup-check-it 
+                           +check("Set up your working hours","checkbox")
+                     .popup-setup-tlink
+                        a(href="").t-link
+                           |  Need more help?
+                     .popup-setup-btn 
+                        +Btn("FAQs","","center")
+         .popup-close
+            i.fas.fa-times.icon

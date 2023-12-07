@@ -61,6 +61,10 @@
     margin-bottom: 4rem;
   }
 }
+.sec-subus {
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+}
 .subus {
   &-sls {
     margin-bottom: 4rem;
@@ -333,6 +337,167 @@
     &-des {
       margin-top: 1.2rem;
       font-size: 1.2rem;
+    }
+  }
+  &-rb {
+    &-boxs {
+      @include flex;
+      gap: 3.2rem;
+    }
+    &-box {
+      &-in {
+        height: 100%;
+        padding: 2.4rem;
+        @include flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 1rem;
+        background: #fff;
+        box-shadow: 0px 1rem 6rem 0px rgba(226, 236, 249, 0.5);
+        .igr {
+          @include flex;
+          align-items: center;
+          gap: 1.6rem;
+          .t-txt {
+            @include fz-14;
+            color: #828b8c;
+          }
+          .icon-rb {
+            width: 8.4rem;
+            height: 8.4rem;
+            @include flex;
+          }
+          .igrs {
+            @include flex;
+            flex-direction: column;
+            row-gap: 0.4rem;
+            .t-gr {
+              @include flex;
+              align-items: center;
+              gap: 0.2rem;
+              .icon {
+                width: 2.4rem;
+                height: 2.4rem;
+                @include mid-flex;
+              }
+              .t-text {
+                color: #00ac4f;
+                font-size: 1.2rem;
+                font-weight: 700;
+              }
+              .t-txt2 {
+                color: #3a3f40;
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &-fb {
+    margin-top: 4.8rem;
+    &-row {
+      @include flex;
+      margin: 0 -1.6rem;
+    }
+    &-left {
+      width: calc((5 / 9) * 100%);
+      padding: 0 1.6rem;
+    }
+    &-right {
+      width: calc((4 / 9) * 100%);
+      padding: 0 1.6rem;
+    }
+    &-py {
+      padding: 4.6rem;
+      background: #fff;
+      box-shadow: 0px 1rem 6rem 0px rgba(226, 236, 249, 0.5);
+    }
+    &-head {
+      @include flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      .t-text {
+        @include fz-24;
+        color: $color-pri;
+        font-weight: 700;
+      }
+      .t-txt {
+        @include fz-16;
+        color: #828b8c;
+      }
+    }
+    &-ovs {
+      @include flex;
+      justify-content: center;
+      height: 30rem;
+      align-items: flex-end;
+      gap: 2rem;
+    }
+    &-ov {
+      width: 4rem;
+      height: calc(var(--value) * 1%);
+      cursor: pointer;
+      @include hover {
+        .inner {
+          background: #5932ea;
+          .t-pos {
+            opacity: 1;
+          }
+        }
+        .t-text {
+          color: #5932ea;
+        }
+      }
+      .inner {
+        border-radius: 1rem;
+        height: 100%;
+        background: #edf2f2;
+        transition: 0.3s ease-in-out;
+        position: relative;
+        .t-pos {
+          @include flex;
+          align-items: center;
+          gap: 0.4rem;
+          position: absolute;
+          bottom: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          margin-bottom: 1.2rem;
+          padding: 0.4rem 0.8rem;
+          background: $color-pri;
+          border-radius: 1rem;
+          opacity: 0;
+          transition: 0.3s ease-in-out;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 1.2rem;
+            height: 1rem;
+            background: $color-pri;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            clip-path: polygon(50% 100%, 0 0, 100% 0);
+          }
+          .icon {
+            @include mid-flex;
+            color: #00ac4f;
+            font-family: 700;
+          }
+          .t-txt {
+            color: #fff;
+            font-weight: 600;
+          }
+        }
+      }
+      .t-text {
+        text-align: center;
+        margin-top: 1.4rem;
+        transition: 0.3s ease-in-out;
+        @include fz-14;
+      }
     }
   }
 }

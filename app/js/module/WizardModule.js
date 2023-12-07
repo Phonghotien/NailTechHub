@@ -31,4 +31,19 @@ export default function WizardModule() {
       }
     });
   }
+  $(document).ready(function () {
+    $(".subus-block input").each(function (index, element) {
+      $(".sign-check-hidden input").change(function (e) {
+        e.preventDefault();
+        if (this.checked) {
+          console.log("run");
+          $(".subus-block .form-list").addClass("hide-form").slideUp(400);
+          $(element).removeClass("required");
+        } else {
+          $(".subus-block .form-list").removeClass("hide-form").slideDown(400);
+          $(element).addClass("required");
+        }
+      });
+    });
+  });
 }
