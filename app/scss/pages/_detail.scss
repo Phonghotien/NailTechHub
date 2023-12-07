@@ -64,6 +64,13 @@
 .sec-subus {
   padding-top: 10rem;
   padding-bottom: 4rem;
+  .select-ful {
+    span.select2 {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
 }
 .subus {
   &-sls {
