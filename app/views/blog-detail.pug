@@ -1,0 +1,137 @@
+extends layout/layout
+
+block vars
+   -title = 'Blog Details'
+   -bodyClass = 'page-blog'
+
+block container 
+   +breadCrumb(["The Artistry of Nails Unveiling the Beauty"])
+   section.blog.ss-pd-t 
+      .container 
+         .blog-wr 
+            .head.t-center 
+               p.sub Redefining Nail Artistry for the Modern World
+               +ttp("The Artistry of Nails Unveiling the Beauty","") 
+            .blog-dt   
+               .blog-dt-top 
+                  .blog-dt-ava 
+                     +img("h-ava2.jpg")
+                     .text
+                        p.text-name Sophia Johnson
+                        p.text-role 11 Oct 2023 • 231
+                  .blog-dt-social 
+                     a.blog-dt-social-it(href="")
+                        +img("h-ic-link.svg") 
+                     a.blog-dt-social-it(href="")
+                        +img("h-ic-linked.svg") 
+                     a.blog-dt-social-it(href="")
+                        +img("h-ic-x.svg") 
+                     a.blog-dt-social-it(href="")
+                        +img("h-ic-fb.svg") 
+               .blog-dt-img 
+                  .img 
+                     .img-inner 
+                        +img("h-mn1.jpg")
+               .blog-dt-content.mona-content 
+                  h3 Introduction
+                  p In 2020, Menicure founder Richard Arnold uncovered a gap in Toronto, Canada's beauty market: there were plenty of barbershops for men to choose from, but no dedicated spaces for men’s nail and skin care or hair removal. So he set out to create a place where men would be comfortable indulging in treatments that are typically seen as ‘not for them’, and change Toronto’s view of masculinity.
+                  p Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.
+                  .wp-block-image 
+                     +img("h-mn2.jpg")
+                  blockquote 
+                     p And Fresha is helping them do it every step of the way. Richard uses the platform to streamline their operations, take Menicure’s services to as many clients as possible, and grow the business.
+                  h4 “We’re here to break down stereotypes and make the world think differently about male grooming.”
+                  p From complimentary beers to TVs playing clients’ favourite shows, Richard built Menicure to be a safe space where comfort is never compromised and self-care is celebrated. “We’re here to break down stereotypes and make the world think differently about male grooming,” Richard told us. His team shares the same philosophy, and it shows in their top-quality manicures, pedicures and waxing services.
+                  blockquote 
+                     h4 “Fresha ticked all the boxes for us, without charging us a monthly subscription.”
+                  p Richard tried various other platforms before Fresha, but none were the right fit for Menicure. They either lacked essential features like tipping and smart scheduling, or they locked features behind costly subscriptions. “Fresha ticked all the boxes for us, without charging us a monthly subscription,” Richard said.
+                  p “We were worried switching software would be a nightmare. But setting up Fresha was really easy – most of it was automated,” he continued. “It’s so user friendly that both our team and clients were using the platform like pros in no time. Not to mention, their customer service is better than all the other providers we’ve tried.”
+                  h3 Keeping clients in the loop with automated marketing
+                  p Staying in touch with clients is key for Menicure. Richard uses Fresha’s client notifications to keep clients engaged from the moment they book, and make sure they stay connected to Menicure long after their appointments.
+                  h4 “It’s so important to check in with clients and keep them engaged with our brand. Fresha lets us do that without lifting a finger.”
+                  .wp-block-image 
+                     +img("h-mn3.jpg")
+                  blockquote 
+                     p And Fresha is helping them do it every step of the way. Richard uses the platform to streamline their operations, take Menicure’s services to as many clients as possible, and grow the business.
+                  p Nunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas condimentum mi massa. In tincidunt pharetra consectetur sed duis facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit dictum eget nibh tortor commodo cursus.
+                  p “No-shows are one of the biggest risks to our business, and Fresha’s appointment reminders help keep them to a minimum,” Richard explained. “Our clients lead busy lives, so Fresha’s appointment reminders make all the difference.” After each treatment he follows up with Fresha’s automatic “thank you” messages to show clients they’re valued, while encouraging them to leave a tip and review.
+                  p Richard also uses Fresha’s automated marketing campaigns to send special offers to welcome new clients, reward regulars, and celebrate clients’ birthdays. “It’s so important to check in with clients and keep them engaged with our brand,” Richard said. “Fresha lets us do that without lifting a finger.”
+      .blog-relate.ss-pd-t 
+         .blog-relate-container 
+            .container 
+               h3.blog-relate-tt Related articles
+               .blog-relate-swiper
+                  .swiper-container.row 
+                     .swiper
+                        .swiper-wrapper
+                           -
+                              var arrs = [
+                                 {
+                                    img:"bl1.jpg",
+                                    name:"The Artistry of Nails Unveiling the Beauty",
+                                    des:"Nail care is not merely a routine; it's an art form. Our blog delves into the world of nail artistry, exploring how intricate designs and skillful craftsmanship can elevate your style.",
+                                 },
+                                 {
+                                    img:"bl2.jpg",
+                                    name:"The Artistry of Nails Unveiling the Beauty",
+                                    des:"Nail care is not merely a routine; it's an art form. Our blog delves into the world of nail artistry, exploring how intricate designs and skillful craftsmanship can elevate your style.",
+                                 },
+                                 {
+                                    img:"bl3.jpg",
+                                    name:"The Artistry of Nails Unveiling the Beauty",
+                                    des:"Nail care is not merely a routine; it's an art form. Our blog delves into the world of nail artistry, exploring how intricate designs and skillful craftsmanship can elevate your style.",
+                                 },
+                                 {
+                                    img:"bl4.jpg",
+                                    name:"The Artistry of Nails Unveiling the Beauty",
+                                    des:"Nail care is not merely a routine; it's an art form. Our blog delves into the world of nail artistry, exploring how intricate designs and skillful craftsmanship can elevate your style.",
+                                 },
+                                 {
+                                    img:"bl5.jpg",
+                                    name:"The Artistry of Nails Unveiling the Beauty",
+                                    des:"Nail care is not merely a routine; it's an art form. Our blog delves into the world of nail artistry, exploring how intricate designs and skillful craftsmanship can elevate your style.",
+                                 },
+                                 {
+                                    img:"bl6.jpg",
+                                    name:"The Artistry of Nails Unveiling the Beauty",
+                                    des:"Nail care is not merely a routine; it's an art form. Our blog delves into the world of nail artistry, exploring how intricate designs and skillful craftsmanship can elevate your style.",
+                                 }
+                              ]
+                           each val in arrs  
+                              .swiper-slide.col    
+                                 .blog-item
+                                    .inner 
+                                       .img 
+                                          a.img-inner(href="")
+                                             +img(val.img)
+                                       .info 
+                                          .info-date 
+                                             .info-date-line 
+                                                +img("h-ic-cld.svg")
+                                                span.txt July 1st 2023
+                                             .info-date-line 
+                                                +img("h-ic-eyes.svg")
+                                                span.txt 231
+                                          h3 
+                                             a(href="").info-tt #{val.name}
+                                          p.info-des #{val.des} 
+                                          .info-ava 
+                                             +img("h-ava.jpg")
+                                             .text 
+                                                p.text-name Sophia Johnson
+                                                p.text-role Sophia nails & spas
+                  .swiper-control.posi.midle
+                     .swiper-control-btn.swiper-prev
+                        i(class="fa-regular fa-arrow-left")
+                     .swiper-control-btn.swiper-next
+                        i(class="fa-regular fa-arrow-right")
+      .ab-thanks.ss-pd-t 
+         .container 
+            .ab-thanks-wr.row
+               .ab-thanks-ctn.col
+                  .wrapper(data-text="NAILTECHHUB") 
+                     +tts("If you'd like to learn more about the services","Please visit our Services page")
+                     +Btn("Services","","")
+               .ab-thanks-model.col 
+                  .img 
+                     +img("h-model.png") 

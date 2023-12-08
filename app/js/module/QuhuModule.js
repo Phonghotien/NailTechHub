@@ -156,7 +156,7 @@ export default function QuhuModule() {
     var swiperAbThumb = new Swiper(".ab-sl-thumb .swiper", {
         slidesPerView: "auto",
         spaceBetween: 0,
-        allowTouchMove:false,
+        allowTouchMove: false,
         pagination: {
             el: ".ab-sl-thumb .swiper-pagination",
             clickable: true,
@@ -166,24 +166,83 @@ export default function QuhuModule() {
         slidesPerView: "auto",
         spaceBetween: 0,
         navigation: {
-            prevEl:".ab-sl-main .swiper-prev",
-            nextEl:".ab-sl-main .swiper-next",
+            prevEl: ".ab-sl-main .swiper-prev",
+            nextEl: ".ab-sl-main .swiper-next",
         },
         thumbs: {
-            swiper:swiperAbThumb,
+            swiper: swiperAbThumb,
         }
     });
     // blog 
-    const blogList  = document.querySelector(".blog-list")
-    if(blogList) {
+    const blogList = document.querySelector(".blog-list")
+    if (blogList) {
         const btn = blogList.querySelector(".load-btn")
         const text = btn.querySelector(".text")
-        btn.addEventListener('click', ()=> {
-            if(text.textContent == "🡡") {
+        btn.addEventListener('click', () => {
+            if (text.textContent == "🡡") {
                 blogList.classList.add("open")
-            }else {
+            } else {
                 blogList.classList.remove("open")
             }
         })
     }
+    functionSlider(".blog-relate", {
+        speed: 1600,
+        autoplay: false,
+        // slidesPerGroup: 2,
+        initialSlide: 1,
+        centeredSlides: true,
+        loop: false,
+        spaceBetween: 0,
+        slidesPerView: "auto",
+        //  allowTouchMove: false,
+    });
+    // next step
+    const stepBlock = document.querySelector(".stepBlock");
+    if (stepBlock) {
+        // const prevTabBtn = stepBlock.querySelector(".prev-tab-btn");
+        const nextTabBtn = stepBlock.querySelector(".next-tab-btn");
+        const tabContent = stepBlock.querySelectorAll(".stepContent");
+
+        tabContent.forEach((item) => {
+            let currentTab = 0;
+
+            const tabs = item.querySelectorAll(".step-content");
+
+            function showTab(index) {
+                tabs.forEach((tab, idx) => {
+                    if (idx === index) {
+                        tab.classList.add("active");
+                        $(tab).slideDown();
+                    } else {
+                        tab.classList.remove("active");
+                        $(tab).slideUp();
+                    }
+                });
+            }
+            function nextTab(e) {
+                e.preventDefault();
+                currentTab++;
+                if (currentTab < tabs.length - 1) {
+                    showTab(currentTab);
+                } else {
+                    nextTabBtn.querySelector(".inner").textContent = 'Booking';
+                    showTab(currentTab);
+                }
+            }
+
+            function prevTab(e) {
+                e.preventDefault();
+                if (currentTab > 0) {
+                    currentTab--;
+                    showTab(currentTab);
+                }
+            }
+
+            showTab(currentTab);
+            nextTabBtn.addEventListener("click", nextTab);
+            // prevTabBtn.addEventListener("click", prevTab);
+        });
+    }
+
 }

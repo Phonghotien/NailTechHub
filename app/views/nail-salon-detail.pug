@@ -1,0 +1,311 @@
+extends layout/layout
+
+block vars
+   -title = 'Nail Salon  List'
+   -bodyClass = 'page-nail'
+
+block container 
+   +breadCrumb(["Nail salons"])
+   section.bn 
+      .bg 
+         +img("h-bn2.jpg")
+      .container 
+         .bn-wr
+            
+   section.salon 
+      .container 
+         .salon-srch 
+            form(action="")
+               .salon-srch-flex 
+                  .salon-srch-item
+                     .name   
+                        +img("h-ic-target.svg")  
+                        span.name-txt Location    
+                     input(type="text", placeholder="Search for locations near you")    
+                     //- them class open
+                     .salon-srch-item-rs 
+                        ul.rs 
+                           li.rs-item 
+                              a.rs-item-flex(href="")
+                                 +img("h-ic-target.svg")
+                                 span.text Ohio 
+                           li.rs-item 
+                              a.rs-item-flex(href="")
+                                 +img("h-ic-target.svg")
+                                 span.text California 
+                           li.rs-item 
+                              a.rs-item-flex(href="")
+                                 +img("h-ic-target.svg")
+                                 span.text Boston 
+                           li.rs-item 
+                              a.rs-item-flex(href="")
+                                 +img("h-ic-target.svg")
+                                 span.text Dallas 
+                           li.rs-item 
+                              a.rs-item-flex(href="")
+                                 +img("h-ic-target.svg")
+                                 span.text Chicago 
+                  .salon-srch-item
+                     .name   
+                        +img("h-ic-clder.svg")  
+                        span.name-txt Check in    
+                     .dateTime(data-type='single')
+                        .dateTimeItem
+                              .dateTimeText
+                                 | Choose your arrival time
+                              input.dateTimeInput(type='text')
+                  .salon-srch-item
+                     .name   
+                        +img("h-ic-nail.svg")  
+                        span.name-txt Service    
+                     .select 
+                        select(name="",class="re-select-main", data-placeholder="Choose the service you want")
+                           option(value="") Choose the service you want
+                           option(value="1") Nails       
+                           option(value="2") Nails       
+                           option(value="3") Nails       
+                           option(value="4") Nails       
+                  button.salon-srch-btn(data-text="Search")
+                     +img("h-ic-srch.svg")
+         .salon-dt 
+            .salon-dt-top 
+               .salon-dt-head 
+                  +tts("Nail Nirvana","")
+                  .salon-dt-head-line  
+                     .salon-dt-star 
+                        span.num 5.0
+                        .star
+                           .star-list
+                              .star-flex.star-empty
+                                 img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                 img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                 img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                 img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                 img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                              .star-flex.star-filter(style='width: 80%;')
+                                 img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                 img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                 img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                 img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                 img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                        span.qty (1050)
+                     .time 
+                        |Open  untill 
+                        span.bold 10:00pm
+                     .add Orange District, Little Saigon, California.
+               .blog-dt-social 
+                  a.blog-dt-social-it(href="")
+                     +img("h-ic-link.svg") 
+                  a.blog-dt-social-it(href="")
+                     +img("h-ic-linked.svg") 
+                  a.blog-dt-social-it(href="")
+                     +img("h-ic-x.svg") 
+                  a.blog-dt-social-it(href="")
+                     +img("h-ic-fb.svg") 
+            .salon-dt-flex.row 
+               .salon-dt-left.col.col-8
+                  .salon-dt-item 
+                     .inner 
+                        .img 
+                           a.img-inner(href="")
+                              +img("h-sl-n1.jpg") 
+               .salon-dt-right.col.col-4
+                  .wrapper
+                     .salon-dt-item 
+                        .inner
+                           .img 
+                              a.img-inner(href="") 
+                                 +img("h-sl-n2.jpg")
+                     .salon-dt-item
+                        .inner 
+                           .img 
+                              a.img-inner(href="") 
+                                 +img("h-sl-n3.jpg")
+            .salon-dt-left-des 
+               span.bold At Nail Nirvana
+               |, we bring beauty and relaxation to your fingertips. Our skilled technicians offer a range of nail treatments, from classic manicures to stunning nail art. Step into our oasis and experience nail nirvana today.
+            .salon-step.ss-pd.stepBlock  
+               .stepContent 
+                  .step-content 
+                     h3.salon-step-tt Technician       
+                  .step-content 
+                     h3.salon-step-tt Services              
+               form(action="") 
+                  .salon-step-flex.row
+                     .salon-step-content.col.col-8
+                        .stepContent
+                           .step-content 
+                              .salon-step-mem.row 
+                                 -
+                                    var arrs = [
+                                       "h-sl-1.jpg",
+                                       "h-sl-2.jpg",
+                                       "h-sl-3.jpg",
+                                       "h-sl-4.jpg",
+                                       "h-sl-1.jpg",
+                                       "h-sl-2.jpg",
+                                    ] 
+                                 each val in arrs
+                                    label.salon-step-mem-item.col   
+                                       input(type="radio", name="mem",hidden) 
+                                       span.ab-sl-item.small
+                                          span.sqr
+                                          span.inner 
+                                             span.img 
+                                                span.img-inner
+                                                   +img(val) 
+                                             span.info 
+                                                h3 
+                                                   .info-name Sophia Johnson
+                                                span.star
+                                                   span.star-list
+                                                      span.star-flex.star-empty
+                                                         img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                         img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                         img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                         img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                         img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                      span.star-flex.star-filter(style='width: 80%;')
+                                                         img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                         img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                         img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                         img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                         img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                p.info-des 
+                                                   |Sophia Johnson, an experienced nail technician, offers the following nail services at his salon:
+                                                ul.info-list 
+                                                   li Manicures
+                                                   li Pedicures
+                                                   li Gel Nails
+                                                   li Acrylic Nails
+                                                   li Nail Art
+                                                   li Custom Nail Painting
+                           .step-content
+                              .salon-step-ser.row           
+                                 -
+                                    var arrs = [
+                                       "Manicure",
+                                       "Pedicure",
+                                       "Gel Nails",
+                                       "Acrylic Nails",
+                                       "Nail Art",
+                                       "French Manicure",
+                                       "Nail Extensions",
+                                    ]
+                                 each val in arrs 
+                                    label.salon-step-ser-label.col 
+                                       input(type="checkbox",hidden)
+                                       span.salon-step-ser-item
+                                          span.sqr 
+                                          span.salon-step-ser-left
+                                             span.tt=val
+                                             span.time 1h 20min
+                                             span.price $250
+                                          span.salon-step-ser-right 
+                                             span.text A manicure typically includes nail shaping, cuticle care, hand massage, and nail polish application.
+                        +PageNumber()
+                     .salon-step-side.col.col-4    
+                        .wrapper
+                           .side-fixed
+                              .side-fixed-wrap
+                                 .stepContent 
+                                    .step-content
+                                       .salon-step-block 
+                                          .salon-step-block-hd Filter
+                                          .salon-step-block-bd 
+                                             .salon-check
+                                             -
+                                                var arrs = [
+                                                   "Manicurist",
+                                                   "Pedicurist",
+                                                   "Nail Technician",
+                                                   "Nail Artist",
+                                                   "Waxing Specialist",
+                                                   "Eyelash Technician",
+                                                   "Skin Care Specialist",
+                                                   "Esthetician",
+                                                   "Massage Therapist",
+                                                ] 
+                                             each val in arrs
+                                                label.salon-check-item 
+                                                   input(type="checkbox", hidden)
+                                                   span.sqr
+                                                   span.txt=val
+                                    .step-content 
+                                       .salon-step-block 
+                                          .salon-step-block-hd Filter
+                                          .salon-step-block-bd 
+                                             .salon-check
+                                             -
+                                                var arrs = [
+                                                   "Manicurist",
+                                                   "Pedicurist",
+                                                   "Nail Technician",
+                                                   "Nail Artist",
+                                                   "Waxing Specialist",
+                                                   "Eyelash Technician",
+                                                   "Skin Care Specialist",
+                                                   "Esthetician",
+                                                   "Massage Therapist",
+                                                ] 
+                                             each val in arrs
+                                                label.salon-check-item 
+                                                   input(type="checkbox", hidden)
+                                                   span.sqr
+                                                   span.txt=val  
+                                 .salon-step-block    
+                                    .salon-step-block-wr 
+                                       p.tt Nail Nirvana
+                                       .salon-dt-star 
+                                          span.num 5.0
+                                          .star
+                                             .star-list
+                                                .star-flex.star-empty
+                                                   img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                   img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                   img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                   img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                   img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                .star-flex.star-filter(style='width: 80%;')
+                                                   img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                   img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                   img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                   img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                   img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                          span.qty (1050)
+                                       +Btn("Next step","","next-tab-btn")
+                                       .salon-step-block-bot 
+                                          .salon-step-block-line 
+                                             +img("h-ic-clock.svg")
+                                             p.txt 
+                                                span.bold Open 
+                                                |untill 
+                                                span.bold 10:00pm
+                                          .salon-step-block-line 
+                                             +img("h-ic-locate.svg")
+                                             p.txt 
+                                                |Orange District, Little Saigon, California.
+                              .side-close
+                                 i.fas.fa-times.close.icon
+                           .side-overlay
+               .side-open
+                  .side-open-wrap
+                     span.txt Next step
+   section.ab-thanks.ss-pd-t.custom 
+      .container 
+         .ab-thanks-wr.row
+            .ab-thanks-ctn.col
+               .wrapper(data-text="NAILTECHHUB") 
+                  .ab-thanks-deal 
+                     span.bold 30% 
+                     |promotion on total bill
+                  +tts("Discover Exciting Promotions!","")
+                  .ab-thanks-des 
+                     span.bold Join now 
+                     |and experience our service.
+                     br
+                     |Don't miss this!
+                  +Btn("Services","","second")
+            .ab-thanks-model.col 
+               .img 
+                  +img("h-model.png") 

@@ -1,0 +1,193 @@
+extends layout/layout
+
+block vars
+   -title = 'Checkout'
+   -bodyClass = 'page-ck'
+
+block container 
+   +breadCrumb(["Nail salons","Nail Nirvana","Choose a nail technician","Select service","Checkout"])
+   section.ck.ss-pd-t
+      .container 
+         .ck-wr
+            .head.t-center 
+               p.sub Redefining Nail Artistry for the Modern World
+               +ttp("Check Out","")
+            form(action="") 
+               .ck-flex.row 
+                  .ck-left.col.col-8 
+                     .wrapper 
+                        .ab-sl-item.horizontal
+                           .inner 
+                              .img 
+                                 a.img-inner(href="")
+                                    +img("h-sl-3.jpg") 
+                              .info 
+                                 h3 
+                                    a(href="").info-name Sophia Johnson
+                                 .salon-dt-star 
+                                    span.num 5.0
+                                    .star
+                                       .star-list
+                                          .star-flex.star-empty
+                                             img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                             img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                             img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                             img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                             img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                          .star-flex.star-filter(style='width: 80%;')
+                                             img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                             img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                             img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                             img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                             img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                    span.qty (1050)
+                                 p.info-des 
+                                    |With over 10 years in the beauty industry, Sophia is a seasoned Nail and Hair Stylist known for her innovative and personalized approach. She has a knack for creating fresh, elegant looks that enhance her clients' natural beauty. Sophia continuously updates her skills to stay current with the latest trends and techniques in nail design and hair styling.
+                        .ck-service.ss-pd-t  
+                           h3.salon-step-tt Your services    
+                           .salon-step-ser.row           
+                              -
+                                 var arrs = [
+                                    "Manicure",
+                                    "Pedicure",
+                                    "Gel Nails",
+                                    "Acrylic Nails",
+                                    "Nail Art",
+                                    "French Manicure",
+                                    "Nail Extensions",
+                                 ]
+                              each val in arrs 
+                                 label.salon-step-ser-label.col 
+                                    span.salon-step-ser-item
+                                       span.cancel
+                                       span.salon-step-ser-left
+                                          span.tt=val
+                                          span.time 1h 20min
+                                          span.price $250
+                                       span.salon-step-ser-right 
+                                          span.text A manicure typically includes nail shaping, cuticle care, hand massage, and nail polish application.       
+                        .ck-booking.ss-pd-t 
+                           .wrapper 
+                              .head.t-center 
+                                 +tts("Booking information","Whether you have questions or you would just like to say hello, contact us.")
+                              .form-list.row 
+                                 .form-ip.col 
+                                    span.text Your name
+                                    input(type="text", placeholder="Enter your name")
+                                 .form-ip.col 
+                                    span.text Phone number
+                                    .form-ip-flex
+                                       .form-ip-select 
+                                          select(name="",class="re-select-main", placeholder="")
+                                             option(value="1") +84   
+                                             option(value="1") +84   
+                                             option(value="1") +84   
+                                             option(value="1") +84   
+                                       input(type="text", placeholder="Enter your phone number")
+                                 .form-ip.col 
+                                    span.text Select date
+                                    .form-ip-flex 
+                                       span.ic 
+                                          +img("h-ic-clder.svg") 
+                                       .dateTime(data-type='single')
+                                          .dateTimeItem
+                                             .dateTimeText
+                                                | Choose your arrival time
+                                             input.dateTimeInput(type='text')
+                                 .form-ip.col 
+                                    span.text Select date
+                                    .form-ip-flex 
+                                       span.ic 
+                                          +img("h-ic-clock.svg") 
+                                       .select
+                                          select(name="",class="re-select-main",data-placeholder="Choose a time frame")
+                                             option(value="") Choose a time frame
+                                             option(value="1")  Morning (8:00 am - 10:00am)
+                                             option(value="1")  Morning (8:00 am - 10:00am)
+                                             option(value="1")  Morning (8:00 am - 10:00am)
+                                             option(value="1")  Morning (8:00 am - 10:00am)
+                                 .form-ip.col 
+                                    span.text Messages 
+                                    textarea(name="", placeholder="Description")
+                     .side-open
+                        .side-open-wrap
+                           span.txt Checkout 
+                  .ck-right.col.col-4 
+                     .wrapper
+                        .side-fixed
+                           .side-fixed-wrap
+                              .salon-step-block    
+                                 .salon-step-block-wr 
+                                    p.tt Nail Nirvana
+                                    .salon-dt-star 
+                                       span.num 5.0
+                                       .star
+                                          .star-list
+                                             .star-flex.star-empty
+                                                img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                             .star-flex.star-filter(style='width: 80%;')
+                                                img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                       span.qty (1050)
+                                    .salon-step-block-bot 
+                                       .salon-step-block-line 
+                                          +img("h-ic-clock.svg")
+                                          p.txt 
+                                             span.bold Open 
+                                             |untill 
+                                             span.bold 10:00pm
+                                       .salon-step-block-line 
+                                          +img("h-ic-locate.svg")
+                                          p.txt 
+                                             |Orange District, Little Saigon, California.
+                              .salon-step-block 
+                                 .ck-block 
+                                    .ck-block-hd Total bill
+                                    .ck-block-bd 
+                                       .ck-block-line 
+                                          span.name Provisional
+                                          span.val $1000
+                                       .ck-block-line 
+                                          span.name Tip
+                                          input(type="text", placeholder="Tip")
+                                       .ck-block-line 
+                                          span.name TAXES (10%)
+                                          span.val $100
+                                       .ck-block-total 
+                                          span.name Total
+                                          span.total $1.100
+                              .salon-step-block 
+                                 .ck-block 
+                                    .ck-block-hd Payment method
+                                    .ck-block-sk 
+                                       +img("stripe.png")
+                                       span.txt Payment via Stripe
+                                    +Btn("Check out","button","")
+                           .side-close
+                              i.fas.fa-times.close.icon
+                        .side-overlay
+   section.ab-thanks.ss-pd-t.custom 
+      .container 
+         .ab-thanks-wr.row
+            .ab-thanks-ctn.col
+               .wrapper(data-text="NAILTECHHUB") 
+                  .ab-thanks-deal 
+                     span.bold 30% 
+                     |promotion on total bill
+                  +tts("Discover Exciting Promotions!","")
+                  .ab-thanks-des 
+                     span.bold Join now 
+                     |and experience our service.
+                     br
+                     |Don't miss this!
+                  +Btn("Services","","second")
+            .ab-thanks-model.col 
+               .img 
+                  +img("h-model.png") 
