@@ -1,0 +1,113 @@
+extends layout/layout
+
+block vars
+   -title = 'Nail Salon  List'
+   -bodyClass = 'page-nail'
+
+block container 
+   +breadCrumb(["Nail salons"])
+   section.bn 
+      .bg 
+         +img("h-bn.jpg")
+      .container 
+         .bn-wr
+            +tts("Stores","Redefining Nail Artistry for the Modern World")
+   section.salon 
+      .container 
+         .salon-srch 
+            form(action="")
+               .salon-srch-flex 
+                  .salon-srch-item
+                     .name   
+                        +img("h-ic-target.svg")  
+                        span.name-txt Location    
+                     input(type="text", placeholder="Search for locations near you")    
+                     //- them class open
+                     .salon-srch-item-rs 
+                        ul.rs 
+                           li.rs-item 
+                              a.rs-item-flex(href="")
+                                 +img("h-ic-target.svg")
+                                 span.text Ohio 
+                           li.rs-item 
+                              a.rs-item-flex(href="")
+                                 +img("h-ic-target.svg")
+                                 span.text California 
+                           li.rs-item 
+                              a.rs-item-flex(href="")
+                                 +img("h-ic-target.svg")
+                                 span.text Boston 
+                           li.rs-item 
+                              a.rs-item-flex(href="")
+                                 +img("h-ic-target.svg")
+                                 span.text Dallas 
+                           li.rs-item 
+                              a.rs-item-flex(href="")
+                                 +img("h-ic-target.svg")
+                                 span.text Chicago 
+                  .salon-srch-item
+                     .name   
+                        +img("h-ic-clder.svg")  
+                        span.name-txt Check in    
+                     .dateTime(data-type='single')
+                        .dateTimeItem
+                              .dateTimeText
+                                 | Choose your arrival time
+                              input.dateTimeInput(type='text')
+                  .salon-srch-item
+                     .name   
+                        +img("h-ic-nail.svg")  
+                        span.name-txt Service    
+                     .select 
+                        select(name="",class="re-select-main", data-placeholder="Choose the service you want")
+                           option(value="") Choose the service you want
+                           option(value="1") Nails       
+                           option(value="2") Nails       
+                           option(value="3") Nails       
+                           option(value="4") Nails       
+                  button.salon-srch-btn(data-text="Search")
+                     +img("h-ic-srch.svg")
+         .salon-note 
+            span.bold 3.415 
+            |appointments booked today!
+         .salon-list.row   
+            -
+               var arrs = [
+                  "h-sl1.jpg",
+                  "h-sl2.jpg",
+                  "h-sl3.jpg",
+                  "h-sl1.jpg",
+                  "h-sl2.jpg",
+                  "h-sl3.jpg",
+                  "h-sl1.jpg",
+                  "h-sl2.jpg",
+                  "h-sl3.jpg",
+               ]
+            each val in arrs
+               .salon-item.col 
+                  .inner 
+                     .img 
+                        a(href="").img-inner
+                           +img(val)  
+                     .info 
+                        h4 
+                           a(href="").info-tt Excellent Nails 
+                        .info-rate 
+                           span.info-rate-num 5.0
+                           +img("h-star-fill.svg")
+                           span.info-rate-qty (1)
+                        p.info-des Located in the heart of the city, Elegant Nails Haven offers a serene escape with their luxury treatments and state-of-the-art facilities.
+                        .info-locate 
+                           +img("h-ic-target.svg")
+                           span.txt California
+         +PageNumber()
+   section.ab-thanks.ss-pd-t 
+      .container 
+         .ab-thanks-wr.row
+            .ab-thanks-ctn.col
+               .wrapper(data-text="NAILTECHHUB") 
+                  +tts("If you'd like to learn more about the services","Please visit our Services page")
+                  +Btn("Services","","")
+            .ab-thanks-model.col 
+               .img 
+                  +img("h-model.png") 

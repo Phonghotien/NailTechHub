@@ -1,0 +1,71 @@
+extends layout/layout
+
+block vars
+   -title = 'Checkout'
+   -bodyClass = 'page-ck'
+
+block container 
+   +breadCrumb(["Nail salons","Nail Nirvana","Choose a nail technician","Select service","Checkout"])
+   section.ck.ss-pd-t
+      .container 
+         .ck-suc 
+            .ck-suc-head 
+               +img("h-ic-checker.svg")
+               h2.tt Your appointment is completed!
+               p.sub Thank you for your appointment!
+            .ck-suc-bill
+               p.tt Bill detail
+               .ck-suc-ctn 
+                  .ck-suc-ctn-head 
+                     .ck-suc-ctn-item
+                        .ck-suc-ctn-wr
+                           span.name Booking number
+                           span.val 0123456
+                     .ck-suc-ctn-item
+                        .ck-suc-ctn-wr
+                           span.name Check in
+                           span.val July 1st 2023
+                     .ck-suc-ctn-item
+                        .ck-suc-ctn-wr
+                           span.name Total
+                           span.val $1,100
+                     .ck-suc-ctn-item
+                        .ck-suc-ctn-wr
+                           span.name Payment method
+                           span.val Stripe
+                  .ck-suc-ctn-body.row
+                     -
+                        var arrs = [
+                           "Manicure",
+                           "Pedicure",
+                           "Pedicure",
+                           "Pedicure",
+                           "TAXES",
+                           "TIP",
+                        ] 
+                     each val in arrs
+                        .ck-suc-item.col 
+                           .ck-suc-item-flex
+                              .left
+                                 span.left-tt #{val}
+                                 span.left-sub 1h 20min
+                                 span.left-price $250
+                              .right A manicure typically includes nail shaping, cuticle care, hand massage, and nail polish application.
+   section.ab-thanks.ss-pd-t.custom 
+      .container 
+         .ab-thanks-wr.row
+            .ab-thanks-ctn.col
+               .wrapper(data-text="NAILTECHHUB") 
+                  .ab-thanks-deal 
+                     span.bold 30% 
+                     |promotion on total bill
+                  +tts("Discover Exciting Promotions!","")
+                  .ab-thanks-des 
+                     span.bold Join now 
+                     |and experience our service.
+                     br
+                     |Don't miss this!
+                  +Btn("Services","","second")
+            .ab-thanks-model.col 
+               .img 
+                  +img("h-model.png") 
