@@ -11,7 +11,7 @@ export default function WizardModule() {
     const wizard = new Wizard(args);
 
     wizard.init();
-    $(".re-select-main").select2();
+    $(".re-select-main").select2({});
   }
   const btnNotice = $(".hd-notice .icon");
   const body = document.getElementsByTagName("body")[0];
@@ -33,7 +33,7 @@ export default function WizardModule() {
     });
   }
   $(document).ready(function () {
-    $(".subus-block h-required").each(function (index, element) {
+    $(".subus-block .h-required").each(function (index, element) {
       $(".sign-check-hidden input").change(function (e) {
         e.preventDefault();
         if (this.checked) {

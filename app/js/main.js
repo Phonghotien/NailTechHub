@@ -61,7 +61,7 @@ window.addEventListener("DOMContentLoaded", () => {
   BtnToTopModule();
   HeaderModule();
   PopupModule();
-  CheckModule();
+
   GalleryModule();
   SearchModule();
   SideModule();
@@ -73,4 +73,5 @@ window.addEventListener("DOMContentLoaded", () => {
   ChartModule();
   QuhuModule();
   WizardModule();
+  CheckModule();
 });

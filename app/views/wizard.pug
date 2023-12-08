@@ -9,21 +9,6 @@ block container
       .container
          form(action="" method="POST").wizard#formWizard
             .wizard-content
-               .wizard-step(data-title="Business name" data-type="form")
-                  .sec-subus.sec-subus-name
-                     .subus
-                        .subus-wrap 
-                           .subus-head 
-                              .head-title.t-center 
-                                 +tts("What’s your business name?","This is the brand name your clients will see. Your billing and legal name can be added later.")
-                           .subus-block
-                                 .form-list.row 
-                                 .form-ip.col 
-                                    span.text Business name
-                                    input(type="text", placeholder="Mona's Nail & Spa").required
-                                 .form-ip.col 
-                                    span.text Website (Optional)
-                                    input(type="text", placeholder="www.yoursite.com")
                .wizard-step(data-title="Service" data-type="form")
                   .sec-subus
                      .subus
@@ -43,9 +28,9 @@ block container
                                                    +img("nail-icon.svg")
                                                 span.t-text 
                                                    | Nail services 1
-                                                .t-num
-                                                   span.t-tag
-                                                      | Primary
+                                                .order
+                                                //-    span.t-tag
+                                                //-       | Primary
                .wizard-step(data-title="Team size" data-type="form")
                   .sec-subus.sec-subus-size
                      .subus 
@@ -89,15 +74,15 @@ block container
                                     .select-ful 
                                        select(name="",class="re-select-main", placeholder="Enter your country")
                                           option(value="1") +84   
-                                          option(value="1") +84   
-                                          option(value="1") +84 
+                                          option(value="1") +81   
+                                          option(value="1") +82 
                                  .form-ip.col 
                                     span.text Post code 
                                     .select-ful 
-                                       select(name="",class="re-select-main", placeholder="Enter your post code")
-                                          option(value="1") +84   
-                                          option(value="1") +84   
-                                          option(value="1") +84 
+                                       select(name="",class="re-select-main" multiple="multiple", placeholder="Enter your post code")
+                                          option(value="1") +81  
+                                          option(value="1") +85   
+                                          option(value="1") +86 
                               .sign-bot 
                                  label.sign-check 
                                     input(type="checkbox",hidden)
