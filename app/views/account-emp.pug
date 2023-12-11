@@ -118,3 +118,41 @@ block container
                                                 li Nail Art
                                                 li Custom Nail Painting
                            +PageNumber()
+   .popup.popup-addemp.open(data-popup-id="popup-addemp")
+      .popup-overlay
+      .popup-main
+         .popup-main-wrapper
+            .popup-over
+               .popup-wrapper
+                  .popup-addemp-main
+                     .head 
+                        .t-title.t40.fw-6 
+                           | Add your employee
+                        .t-des 
+                           p 
+                              | Whether you have questions or you would just like to say hello, contact us.
+                     .popup-addemp-form 
+                        form(action="")
+                           .form-list.row 
+                              .form-ip.col 
+                                 span.text Your employee name
+                                 input(type="text", placeholder="Your employee name")
+                              .form-ip.col 
+                                 span.text Type of service
+                                 .form-ip-selects 
+                                    select(name="" class="re-select-main", placeholder="" multiple)
+                                       option(value="1") Manicure 1
+                                       option(value="1") Manicure 2
+                                       option(value="1") Manicure 3
+                                       option(value="1") Manicure 4 
+                              .form-ip.col 
+                                 span.text Services
+                                 .form-ip-selects 
+                                    select(name="" class="re-select-main", placeholder="")
+                                       option(value="1") Manicure 1
+                                       option(value="1") Manicure 2
+                                       option(value="1") Manicure 3
+                                       option(value="1") Manicure 4 
+                              .form-ip.col 
+                                 span.text Description about your employee
+                                 textarea(name="", placeholder="Add description")

@@ -95,6 +95,7 @@
     }
   }
   &-setup {
+    background: #edf2f2;
     .popup-wrapper {
       padding: 4rem;
       border-radius: 1rem;
@@ -193,6 +194,14 @@
       &-btn {
         margin-top: 4rem;
       }
+    }
+  }
+  &-addemp {
+    .popup-main {
+      width: 60rem;
+    }
+    .popup-wrapper {
+      padding: 4rem;
     }
   }
 }

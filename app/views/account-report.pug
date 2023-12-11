@@ -54,7 +54,7 @@ block container
                                     | Report
                         .acc-log
                            +Btn("Logout","","full")
-                  .acc-right.col.col-8
+                  .acc-right.col.col-9
                      .acc-prof 
                         .acc-rb-grd.row 
                            .col.col-4
@@ -74,6 +74,11 @@ block container
                         .acc-prof-head 
                            .t-title.t48.fw-5 
                               | Report
+                           .dateTime.icon-date.acc-rb-boxd(data-type='single' data-min="1800")
+                              .dateTimeItem
+                                 .dateTimeText
+                                    | 12/06/1999
+                                 input.dateTimeInput(type='text' value="10/24/1984" readonly)
                         .acc-rp 
                            .acc-rb-boxs 
                               .acc-rb-box 
@@ -268,6 +273,13 @@ block container
                         .acc-prof-head 
                            .t-title.t40.fw-6 
                               | Sophia Johnson’s report
+                           .acc-rb-slw.acc-rb-boxd 
+                              .acc-rb-selects 
+                                    select(name="" class="re-select-main", placeholder="")
+                                       option(value="1") Day
+                                       option(value="1") Week
+                                       option(value="1") Month
+                                       option(value="1") Quarter
                         .acc-rp 
                            .acc-rb-boxs 
                               .acc-rb-box 

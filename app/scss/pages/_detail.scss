@@ -246,6 +246,15 @@
   &-prof {
     &-head {
       margin-bottom: 2.8rem;
+      @include flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.2rem;
+      .acc-rb-boxd {
+        flex: 1;
+        max-width: 30rem;
+        box-shadow: 0px 0.6rem 1.5rem 0px rgba(64, 79, 104, 0.05);
+      }
     }
     &-py {
       padding: 2.4rem;
@@ -373,6 +382,7 @@
             width: 8.4rem;
             height: 8.4rem;
             @include flex;
+            flex-shrink: 0;
           }
           .igrs {
             @include flex;
@@ -402,6 +412,10 @@
       }
     }
     &-grd {
+      .date-time,
+      .acc-rb-slw {
+        box-shadow: 0px 0.6rem 1.5rem 0px rgba(64, 79, 104, 0.05);
+      }
     }
   }
   &-fb {
