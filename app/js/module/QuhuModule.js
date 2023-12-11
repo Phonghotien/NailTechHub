@@ -222,12 +222,17 @@ export default function QuhuModule() {
             }
             function nextTab(e) {
                 e.preventDefault();
-                currentTab++;
-                if (currentTab < tabs.length - 1) {
-                    showTab(currentTab);
+                if (nextTabBtn.classList.contains("monaStepDisabled")) {
+                    return;
                 } else {
-                    nextTabBtn.querySelector(".inner").textContent = 'Booking';
-                    showTab(currentTab);
+                    currentTab++;
+                    if (currentTab < tabs.length - 1) {
+                        showTab(currentTab);
+                    } else {
+                        nextTabBtn.querySelector(".inner-normal").textContent = 'Booking';
+                        nextTabBtn.setAttribute("type","submit")
+                        showTab(currentTab);
+                    }
                 }
             }
 
