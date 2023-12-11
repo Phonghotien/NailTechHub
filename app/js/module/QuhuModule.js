@@ -222,7 +222,7 @@ export default function QuhuModule() {
             }
             function nextTab(e) {
                 e.preventDefault();
-                if (nextTabBtn.classList.contains("monaStepDisabled") || nextTabBtn.classList.contains("monaStepDisabledPro")) {
+                if (nextTabBtn.classList.contains("monaStepDisabled") || nextTabBtn.classList.contains("monaStepDisabledPro") || nextTabBtn.classList.contains("monaStepLast")) {
                     return;
                 } else {
                     currentTab++;
