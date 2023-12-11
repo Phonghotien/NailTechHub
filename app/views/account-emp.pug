@@ -141,7 +141,7 @@ block container
                                  span.text Type of service
                                  .form-ip-selects 
                                     select(name="" class="re-select-main", placeholder="" multiple)
-                                       option(value="1") Manicure 1
+                                       option(value="1" selected) Manicure 1
                                        option(value="1") Manicure 2
                                        option(value="1") Manicure 3
                                        option(value="1") Manicure 4 
@@ -149,11 +149,30 @@ block container
                               .form-ip.col 
                                  span.text Services
                                  .form-ip-selects 
-                                    select(name="" class="re-select-main", placeholder="")
-                                       option(value="1") Manicure 1
+                                    select(name="" class="re-select-main", placeholder="" multiple)
+                                       option(value="1" selected) Manicure 1
                                        option(value="1") Manicure 2
                                        option(value="1") Manicure 3
                                        option(value="1") Manicure 4 
+                                       option(value="1") Manicure 5
                               .form-ip.col 
                                  span.text Description about your employee
                                  textarea(name="", placeholder="Add description")
+                              .form-upload
+                                 .t-title.t24.fw-7.t-center 
+                                    p 
+                                       | Update your employee avatar
+                                 .form-group__file
+                                    span.t-text.fw-6 
+                                       | PNG & JPEG
+                                    label.file-label(for='imageUpload')
+                                    .file-wrapper
+                                       input#imageUpload.file-input(type='file' name='imageUpload')
+                                       .file-preview-background
+                                          img#imagePreview.file-preview(src="./assets/images/upload-img.svg")
+                                    span.t-txt 
+                                       | Select the file in your computer
+                              .popup-addemp-btn 
+                                 +Btn("Add Employee","button","full")
+               .popup-close
+                  i.fas.fa-times.icon

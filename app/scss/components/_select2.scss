@@ -175,9 +175,8 @@
   .select2-selection__rendered {
   @include flex;
   align-items: center;
-  overflow-x: auto;
   white-space: nowrap;
-  display: block;
+  overflow-x: auto;
   &::-webkit-scrollbar {
     height: 0.2rem;
   }
