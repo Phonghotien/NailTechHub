@@ -29,6 +29,9 @@
   @include flex;
   align-items: center;
   height: 4.6rem;
+  padding: 0 1.2rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
 }
 
 .select2-container .select2-selection--single .select2-selection__rendered {
@@ -148,4 +151,34 @@
   margin: unset;
   padding: unset;
   border-radius: unset;
+  line-height: 4.6rem;
+}
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice {
+  margin-top: 0;
+  background-color: #f5f7f7;
+  border-radius: 0.4rem;
+  border: unset;
+}
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice__remove {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.select2-selection__choice__display {
+  color: #3a3f40;
+}
+.select2.select2-container
+  .select2-selection--multiple
+  .select2-selection__rendered {
+  @include flex;
+  align-items: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: block;
+  &::-webkit-scrollbar {
+    height: 0.2rem;
+  }
 }
