@@ -1,0 +1,42 @@
+extends layout/layout
+
+block vars
+   -title = 'Customer'
+   -bodyClass = 'page-customer'
+
+block container 
+   +breadCrumb(["Customer"])
+   section.acc.ss-pd
+      .container
+         .acc-flex.row
+            .acc-left.col.col-4
+            .acc-right.col.col-8
+               .wrapper 
+                  .head
+                     .head-title
+                        h2.t-title-second  Booking History
+                  .acc-table 
+                     table 
+                        thead 
+                           tr 
+                              th Nail salons & Time
+                              th Services & Fee
+                              th Status
+                              th 
+                        tbody 
+                           tr 
+                              td 
+                                 .acc-table-item 
+                                    .img 
+                                       +img("avatar.jpg")
+                                    .info 
+                                       span.tt Excellent Nails
+                                       span.date July 1st 2023
+                              td 
+                                 .acc-table-sv 
+                                    .name Manicure, Pedicure 
+                                    .price $1000
+                              td 
+                                 .acc-table-btn Finished
+                              td 
+                                 a(href="").acc-table-link Detail
