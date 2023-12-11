@@ -1,0 +1,111 @@
+extends layout/layout
+
+block vars
+   -title = 'Account'
+   -bodyClass = 'page-account'
+
+block container 
+   +breadCrumb(["Account"])
+   section.acc.ss-pd
+      .container
+         .acc-flex.row
+            .acc-left.col.col-4
+            .acc-right.col.col-8
+               form(action='')
+                  .wrapper
+                     .head
+                        .head-title
+                           h2.t-title-second  Personal Information
+                     .acc-tab.tabJS
+                        .acc-ctrl.scrollContainer
+                           .acc-ctrl-btn.tabBtn.buttons Information
+                           .acc-ctrl-btn.tabBtn.buttons Password & security
+                           .acc-ctrl-btn.tabBtn.buttons Access rights
+                        .acc-ctn
+                           .acc-ctn-panel.tabPanel
+                              .acc-inner
+                                 .form-list.row
+                                    .form-ip.col.per5
+                                       span.text User name
+                                       input(type='text' placeholder='Enter your user name')
+                                    .form-ip.col.per5
+                                       span.text Email
+                                       input(type='text' placeholder='Enter your email')
+                                    .form-ip.col.per5
+                                       span.text First name
+                                       input(type='text' placeholder='Enter your first name')
+                                    .form-ip.col.per5
+                                       span.text Last name
+                                       input(type='text' placeholder='Enter your last name')
+                                    .form-ip.col.per5
+                                       span.text Phone number
+                                       .form-ip-flex
+                                          .form-ip-select
+                                             select.re-select-main(name='' placeholder='')
+                                                option(value='1') +84   
+                                                option(value='1') +84   
+                                                option(value='1') +84   
+                                                option(value='1') +84   
+                                          input(type='text' placeholder='Enter your phone number')
+                                    .form-ip.col.per5
+                                       span.text Address 
+                                       .form-ip-flex
+                                          span.ic
+                                             img(src='./assets/images/h-ic-target.svg' alt='')
+                                          input(type='text' placeholder='Enter your address')
+                                    .form-ip.col.per5
+                                       span.text Select date
+                                       .dateTime(data-type='single')
+                                          .dateTimeItem
+                                             .dateTimeText Enter your DOB
+                                             input.dateTimeInput(type='text')
+                                    .form-ip.col.per5
+                                       span.text Gender
+                                       select.re-select-main(name='' data-placeholder='Choose gender')
+                                          option(value='')  Choose gender
+                                          option(value='1') Male 
+                                          option(value='2') Female 
+                                          option(value='3') Other 
+                           .acc-ctn-panel.tabPanel
+                              .acc-inner
+                                 .form-list.row
+                                    .form-ip.col.per5
+                                       span.text Current password
+                                       input(type='password' placeholder='Enter your current password')
+                                       i.seepassJS.fas.fa-eye
+                                    .form-ip.col.per5
+                                       span.text New password
+                                       input(type='password' placeholder='Enter your new password')
+                                       i.seepassJS.fas.fa-eye
+                                    .form-ip.col.per5
+                                       span.text Confirm password
+                                       input(type='password' placeholder='Enter your confirm password')
+                                       i.seepassJS.fas.fa-eye
+                           .acc-ctn-panel.tabPanel
+                              .acc-inner
+                                 label.acc-check
+                                    input(type='radio',name="radio")
+                                    span.acc-check-left
+                                       span.tt SMS
+                                       span.des The message is sent by NAILTECHHUB to your mobile phone via SMS  
+                                    span.acc-check-switch
+                                       span.acc-check-dot  
+                                 label.acc-check
+                                    input(type='radio',name="radio")
+                                    span.acc-check-left
+                                       span.tt Email
+                                       span.des The message is sent to you by NAILTECHHUB via email
+                                    span.acc-check-switch
+                                       span.acc-check-dot  
+                                 label.acc-check
+                                    input(type='radio',name="radio")
+                                    span.acc-check-left
+                                       span.tt Call
+                                       span.des The message is notified to you by the NAILTECHHUB via call 
+                                    span.acc-check-switch
+                                       span.acc-check-dot  
+                     .acc-btn
+                        button.btn(type='submit')
+                           span.inner Update
+                        a.btn.three(href='')
+                           span.inner Reset
