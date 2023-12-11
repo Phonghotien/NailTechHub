@@ -24,19 +24,30 @@ block container
                               th Status
                               th 
                         tbody 
-                           tr 
-                              td 
-                                 .acc-table-item 
-                                    .img 
-                                       +img("avatar.jpg")
-                                    .info 
-                                       span.tt Excellent Nails
-                                       span.date July 1st 2023
-                              td 
-                                 .acc-table-sv 
-                                    .name Manicure, Pedicure 
-                                    .price $1000
-                              td 
-                                 .acc-table-btn Finished
-                              td 
-                                 a(href="").acc-table-link Detail
+                           -
+                              var arrs = [
+                                 "success",
+                                 "process",
+                                 "cancel",
+                                 "cancel",
+                                 "cancel",
+                                 "cancel",
+                              ]
+                           each val in arrs
+                              tr 
+                                 td 
+                                    .acc-table-item 
+                                       .img 
+                                          +img("avatar.jpg")
+                                       .info 
+                                          span.tt Excellent Nails
+                                          span.date July 1st 2023
+                                 td 
+                                    .acc-table-sv 
+                                       .name Manicure, Pedicure 
+                                       .price $1000
+                                 td 
+                                    .acc-table-btn(class=val) Finished
+                                 td 
+                                    a(href="").acc-table-link Detail
+                  +Btn("Load more ","","three","h-ic-arrow.svg")       
