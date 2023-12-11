@@ -1,0 +1,147 @@
+extends layout/layout
+
+block vars
+    -title = 'Report'
+    -bodyClass = ''
+    -hdClass='hd-account'
+
+block container 
+   +breadCrumb(["Management"])
+   .sec-acc.ss-pd
+      .container 
+         .acc 
+            .acc-wrap 
+               .acc-row.row 
+                  .acc-left.col.col-3
+                     .acc-control 
+                        .acc-info 
+                           .igr 
+                              .acc-info-image 
+                                 .inner.preview-img
+                                    +img("avt-acc.jpg")
+                                 label.icon-edit(for='up-file-avt')
+                                    span.icon
+                                       +img("icon-edit.svg")
+                                    input#up-file-avt.upload-image(hidden='' type='file')
+                              span.t16.fw-6.c-pri
+                                 | Excellent Nails
+                        .acc-ctrs 
+                           .acc-ctrs-list 
+                              a(href="").t-link.active
+                                 span.icon 
+                                    +img("icon-acc-link.svg")
+                                 span.t-text 
+                                    | Booth Information
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link2.svg")
+                                 span.t-text 
+                                    | Booking Management
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link4.svg")
+                                 span.t-text 
+                                    | Service Management
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link3.svg")
+                                 span.t-text 
+                                    | Employee Management
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link5.svg")
+                                 span.t-text 
+                                    | Report
+                        .acc-log
+                           +Btn("Logout","","full")
+                        .acc-prof-bn 
+                           a(href="").inner 
+                              +img("acc-prof-bn.jpg")
+                        .acc-prof-btn 
+                           +Btn("Start now","","center")
+                  .acc-right.col.col-8 
+                     .acc-empm 
+                        .acc-empm-head 
+                           .t-title.t48.fw-5 
+                              | Service management
+                           .icon-ctr.popup-open(data-popup="popup-adds") 
+                              i.fa-light.fa-plus
+                        .acc-sers-block 
+                           .salon-step-ser.row           
+                                 -
+                                    var arrs = [
+                                       "Manicure",
+                                       "Pedicure",
+                                       "Gel Nails",
+                                       "Acrylic Nails",
+                                       "Nail Art",
+                                       "French Manicure",
+                                       "Nail Extensions",
+                                    ]
+                                 each val in arrs 
+                                    .col
+                                       .salon-step-ser-item
+                                          .igr-ctr 
+                                             span.icon.icon-edit 
+                                                i.fa-light.fa-pen-to-square
+                                             span.icon.icon-eye 
+                                                i.fa-light.fa-eye-slash
+                                             span.icon.icon-del 
+                                                i.fa-light.fa-xmark-large
+                                          span.salon-step-ser-left
+                                             span.tt=val
+                                             span.time 1h 20min
+                                             span.price $250
+                                          span.salon-step-ser-right 
+                                             span.text A manicure typically includes nail shaping, cuticle care, hand massage, and nail polish application.
+                        +PageNumber()
+   .popup.popup-adds(data-popup-id="popup-adds")
+      .popup-overlay
+      .popup-main
+         .popup-main-wrapper
+            .popup-over
+               .popup-wrapper
+                  .popup-adds-main
+                     .head 
+                        .t-title.t40.fw-6 
+                           | Add your service
+                        .t-des.t16 
+                           p 
+                              | Whether you have questions or you would just like to say hello, contact us.
+                     .popup-adds-form 
+                        form(action="")
+                           .form-list.row 
+                              .form-ip.col 
+                                 span.text Service name
+                                 input(type="text", placeholder="Long Nails")
+                              .form-ip.col 
+                                 span.text Type of service
+                                 .form-ip-selects 
+                                    select(name="" class="re-select-main", placeholder="")
+                                       option(value="1") Manicure 1
+                                       option(value="1") Manicure 2
+                                       option(value="1") Manicure 3
+                                       option(value="1") Manicure 4
+                              .form-ip.col
+                                 span.text Duration
+                                 .form-ip-selects 
+                                    select(name="" class="re-select-main", placeholder="")
+                                       option(value="1") Add duration
+                                       option(value="1") Manicure 2
+                                       option(value="1") Manicure 3
+                                       option(value="1") Manicure 4
+                              .form-ip.col 
+                                 span.text Fee of service
+                                 .igr-pos
+                                    span.t-pos $
+                                    input(type="number", placeholder="45")
+                              .form-ip.col 
+                                 span.text Description
+                                 textarea(name="", placeholder="Add description")
+                              .form-ip.col 
+                                 span.text Aftercare description
+                                 textarea(name="", placeholder="Add aftercare description")
+                           .popup-adds-form-btn
+                              +Btn("Add service","button","full")
+         .popup-close
+            i.fas.fa-times.icon

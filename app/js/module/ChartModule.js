@@ -130,4 +130,16 @@ export default function ChartModule() {
       });
     });
   });
+  $(document).ready(function () {
+    $(".acc-fb-chart-js").each(function (index, element) {
+      $(element).percentPie({
+        width: 240,
+        trackColor: "#F1EFFB",
+        barColor1: "#5932EA",
+        barColor2: "#5932EA",
+        barWeight: 40,
+        fps: 60,
+      });
+    });
+  });
 }

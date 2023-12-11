@@ -401,6 +401,8 @@
         }
       }
     }
+    &-grd {
+    }
   }
   &-fb {
     margin-top: 4.8rem;
@@ -417,6 +419,7 @@
       padding: 0 1.6rem;
     }
     &-py {
+      height: 100%;
       padding: 4.6rem;
       background: #fff;
       box-shadow: 0px 1rem 6rem 0px rgba(226, 236, 249, 0.5);
@@ -506,6 +509,194 @@
         @include fz-14;
       }
     }
+    &-cus {
+    }
+    &-chart {
+      margin-top: 1.2rem;
+      @include mid-flex;
+      flex-direction: column;
+      .igr-chart {
+        width: 28rem;
+        height: 28rem;
+        @include mid-flex;
+        border-radius: 100rem;
+        background: #fff;
+        box-shadow: 0px 1.2rem 7rem 0px rgba(226, 236, 249, 0.5);
+      }
+      .chart-circle {
+        .tag.t32 {
+          @include fz-32;
+        }
+      }
+      .t-txt {
+        @include fz-14;
+        text-align: center;
+        color: #828b8c;
+        margin-top: 1.2rem;
+      }
+    }
+  }
+  &-emp {
+    margin-top: 10rem;
+    &-py {
+      padding: 2.4rem;
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0px 1rem 6rem 0px rgba(226, 236, 249, 0.5);
+    }
+    &-head {
+      text-align: center;
+      .t-text {
+        @include fz-24;
+        font-weight: 700;
+        color: $color-pri;
+      }
+      .t-txt {
+        @include fz-16;
+        color: #828b8c;
+      }
+    }
+    &-block {
+      margin-top: 4.8rem;
+    }
+    &-ul {
+      @include flex;
+      flex-direction: column;
+      row-gap: 0.6rem;
+    }
+    &-it {
+      padding: 1.8rem;
+      @include flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.2rem;
+      border-radius: 1rem;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+      @include hover {
+        background: #f5f7f7;
+      }
+      .icon-ctr {
+        .icon {
+          width: 2.4rem;
+          height: 2.4rem;
+          @include mid-flex;
+          cursor: pointer;
+        }
+      }
+      .igr {
+        @include flex;
+        align-items: center;
+        gap: 1.6rem;
+        .icon-avt {
+          width: 5rem;
+          height: 5rem;
+          @include mid-flex;
+          border-radius: 100rem;
+        }
+        .t-gr {
+          @include flex;
+          flex-direction: column;
+          .t-name {
+            @include fz-16;
+            font-weight: 600;
+            color: $color-pri;
+          }
+          .t-txt {
+            @include fz-14;
+            color: #606769;
+          }
+        }
+      }
+    }
+  }
+  &-empm {
+    &-head {
+      @include flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.2rem;
+      .icon-ctr {
+        width: 4.4rem;
+        height: 4.4rem;
+        @include mid-flex;
+        border-radius: 1rem;
+        color: $color-pri;
+        background: #f5f7f7;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        @include hover {
+          background: $color-pri;
+          color: #fff;
+        }
+      }
+    }
+    &-block {
+      margin-top: 4.8rem;
+    }
+
+    &-it {
+      .ab-sl-item {
+        .igr-ctr {
+          @include flex;
+          align-items: center;
+          gap: 1.2rem;
+          position: absolute;
+          width: max-content;
+          top: 1rem;
+          right: 1rem;
+          z-index: 1;
+          .icon {
+            width: 2.4rem;
+            height: 2.4rem;
+            @include mid-flex;
+            border-radius: 0.4rem;
+            color: $color-pri;
+            background: #f5f7f7;
+            font-size: 1.2rem;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+            @include hover {
+              background: $color-pri;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-sers {
+    &-block {
+      margin-top: 4.8rem;
+      .salon-step-ser-item {
+        position: relative;
+        .igr-ctr {
+          @include flex;
+          align-items: center;
+          gap: 1.2rem;
+          position: absolute;
+          width: max-content;
+          top: 2.4rem;
+          right: 2.4rem;
+          z-index: 1;
+          .icon {
+            width: 2.4rem;
+            height: 2.4rem;
+            @include mid-flex;
+            border-radius: 0.4rem;
+            color: $color-pri;
+            background: #f5f7f7;
+            font-size: 1.2rem;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+            @include hover {
+              background: $color-pri;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
   }
 }
 .sec-subus.sec-subus-name {
@@ -517,5 +708,56 @@
     border: 0.1rem solid #edf2f2;
     background: #fff;
     box-shadow: 0px 6px 15px 0px rgba(64, 79, 104, 0.05);
+  }
+}
+.acc-ctrs {
+  padding-bottom: 2.4rem;
+  border-bottom: 0.1rem solid #edf2f2;
+  &-pos {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+    width: max-content;
+    display: none;
+  }
+  &-action {
+    position: relative;
+    &.open {
+      .acc-ctrs-pos {
+        display: block;
+      }
+    }
+  }
+  &-py {
+    padding: 1.6rem;
+    border-radius: 1rem;
+    background: #f5f7f7;
+    box-shadow: 0px 0.6rem 1.5rem 0px rgba(64, 79, 104, 0.05);
+  }
+  &-ul {
+    @include flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+  }
+  &-it {
+    .igr {
+      @include flex;
+      align-items: center;
+      gap: 1rem;
+      .icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        @include mid-flex;
+      }
+      .t-txt {
+        @include fz-16;
+        color: #606769;
+        transition: 0.3s ease-in-out;
+        @include hover {
+          color: $color-pri;
+        }
+      }
+    }
   }
 }

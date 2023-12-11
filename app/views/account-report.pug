@@ -54,10 +54,25 @@ block container
                                     | Report
                         .acc-log
                            +Btn("Logout","","full")
-                  .acc-right.col.col-9 
+                  .acc-right.col.col-8
                      .acc-prof 
+                        .acc-rb-grd.row 
+                           .col.col-4
+                              .dateTime.icon-date(data-type='single' data-min="1800")
+                                 .dateTimeItem
+                                       .dateTimeText
+                                          | 12/06/1999
+                                       input.dateTimeInput(type='text' value="10/24/1984")
+                           .col.col-4
+                              .acc-rb-slw 
+                                 .acc-rb-selects 
+                                       select(name="" class="re-select-main", placeholder="")
+                                          option(value="1") Day
+                                          option(value="1") Week
+                                          option(value="1") Month
+                                          option(value="1") Quarter
                         .acc-prof-head 
-                           .t-title 
+                           .t-title.t48.fw-5 
                               | Report
                         .acc-rp 
                            .acc-rb-boxs 
@@ -178,6 +193,217 @@ block container
                                                       | 10%
                                              p.t-text 
                                                 | Sun
+                                 .acc-fb-right
+                                    .acc-fb-cus 
+                                       .acc-fb-py 
+                                          .acc-fb-head 
+                                             p.t-text
+                                                | Customers
+                                             span.t-txt 
+                                                | Customers that use services
+                                          .acc-fb-chart 
+                                             .igr-chart 
+                                                .chart-circle.acc-fb-chart-js(data-percent="65")
+                                                   .tag.t32 
+                                                      | 0
+                                             .t-txt 
+                                                | Total New Customers
+                        .acc-emp 
+                           .acc-emp-py 
+                              .acc-emp-head 
+                                 p.t-text
+                                    |  Employee
+                                 p.t-txt
+                                    | Employee report
+                              .acc-emp-block 
+                                 .acc-emp-ul 
+                                    each i in Array(3)
+                                       .acc-emp-it 
+                                          .igr.popup-open(data-popup="popup-emp") 
+                                             span.icon-avt 
+                                                +img("avt-acc.jpg")
+                                             .t-gr 
+                                                span.t-name 
+                                                   | Sophia Johnson
+                                                span.t-txt 
+                                                   | Nail Technicians
+                                          .icon-ctr.acc-ctrs-action.acc-ctrs-js 
+                                             span.icon 
+                                                +img("icon-more.svg")
+                                             .acc-ctrs-pos 
+                                                .acc-ctrs-py 
+                                                   .acc-ctrs-ul 
+                                                      .acc-ctrs-it 
+                                                         .igr 
+                                                            span.icon
+                                                               +img("icon-time.svg")
+                                                            span.t-txt
+                                                               | 11:00 - 12:00 
+                                                      .acc-ctrs-it 
+                                                         .igr 
+                                                            span.icon
+                                                               +img("icon-trash.svg")
+                                                            span.t-txt
+                                                               | Remove appointment
+                                                      .acc-ctrs-it 
+                                                         .igr 
+                                                            span.icon
+                                                               +img("icon-check2.svg")
+                                                            span.t-txt
+                                                               | Appointment completed
+                                                      .acc-ctrs-it 
+                                                         .igr 
+                                                            span.icon
+                                                               +img("icon-bl.svg")
+                                                            span.t-txt
+                                                               | Add blocked time
+   .popup.popup-emp(data-popup-id="popup-emp")
+      .popup-overlay
+      .popup-main
+         .popup-main-wrapper
+            .popup-over
+               .popup-wrapper
+                  .popup-emp-main
+                     .acc-prof 
+                        .acc-prof-head 
+                           .t-title.t40.fw-6 
+                              | Sophia Johnson’s report
+                        .acc-rp 
+                           .acc-rb-boxs 
+                              .acc-rb-box 
+                                 .acc-rb-box-in 
+                                    .igr 
+                                       span.icon-rb 
+                                          +img("icon-rb.svg")
+                                       .igrs 
+                                          span.t-txt 
+                                             | Earning 
+                                          span.t32.fw-7.c-pri
+                                             | $198k
+                                          .t-gr
+                                             span.icon 
+                                                +img("icon-rb-arrow.svg")
+                                             span.t-text 
+                                                | 37.8%
+                                             span.t-txt2 
+                                                | this week
+                              .acc-rb-box 
+                                 .acc-rb-box-in 
+                                    .igr 
+                                       span.icon-rb 
+                                          +img("icon-rb2.svg")
+                                       .igrs 
+                                          span.t-txt 
+                                             | Tip 
+                                          span.t32.fw-7.c-pri
+                                             | $198k
+                              .acc-rb-box 
+                                 .acc-rb-box-in 
+                                    .igr 
+                                       span.icon-rb 
+                                          +img("icon-rb3.svg")
+                                       .igrs 
+                                          span.t-txt 
+                                             | Balance 
+                                          span.t32.fw-7.c-pri
+                                             | $198k
+                                          .t-gr
+                                             span.icon 
+                                                +img("icon-rb-arrow.svg")
+                                             span.t-text 
+                                                | 37.8%
+                                             span.t-txt2 
+                                                | this week
+                           .acc-fb 
+                              .acc-fb-row 
+                                 .acc-fb-left 
+                                    .acc-fb-py 
+                                       .acc-fb-head 
+                                          p.t-text
+                                             | Overview
+                                          span.t-txt 
+                                             | Daily Earning
+                                       .acc-fb-ovs 
+                                          .acc-fb-ov(style="--value:50") 
+                                             .inner 
+                                                .t-pos 
+                                                   span.icon 
+                                                      i.fa-light.fa-arrow-trend-up
+                                                   span.t-txt 
+                                                      | 50%
+                                             p.t-text 
+                                                | Mon
+                                          .acc-fb-ov(style="--value:20") 
+                                             .inner 
+                                                .t-pos 
+                                                   span.icon 
+                                                      i.fa-light.fa-arrow-trend-up
+                                                   span.t-txt 
+                                                      | 20%
+                                             p.t-text 
+                                                | Tue
+                                          .acc-fb-ov(style="--value:30") 
+                                             .inner 
+                                                .t-pos 
+                                                   span.icon 
+                                                      i.fa-light.fa-arrow-trend-up
+                                                   span.t-txt 
+                                                      | 30%
+                                             p.t-text 
+                                                | Wed
+                                          .acc-fb-ov(style="--value:100") 
+                                             .inner 
+                                                .t-pos 
+                                                   span.icon 
+                                                      i.fa-light.fa-arrow-trend-up
+                                                   span.t-txt 
+                                                      | 100%
+                                             p.t-text 
+                                                | Thu
+                                          .acc-fb-ov(style="--value:70") 
+                                             .inner 
+                                                .t-pos 
+                                                   span.icon 
+                                                      i.fa-light.fa-arrow-trend-up
+                                                   span.t-txt 
+                                                      | 70%
+                                             p.t-text 
+                                                | Fri
+                                          .acc-fb-ov(style="--value:80") 
+                                             .inner 
+                                                .t-pos 
+                                                   span.icon 
+                                                      i.fa-light.fa-arrow-trend-up
+                                                   span.t-txt 
+                                                      | 80%
+                                             p.t-text 
+                                                | Sat
+                                          .acc-fb-ov(style="--value:10") 
+                                             .inner 
+                                                .t-pos 
+                                                   span.icon 
+                                                      i.fa-light.fa-arrow-trend-up
+                                                   span.t-txt 
+                                                      | 10%
+                                             p.t-text 
+                                                | Sun
+                                 .acc-fb-right
+                                    .acc-fb-cus 
+                                       .acc-fb-py 
+                                          .acc-fb-head 
+                                             p.t-text
+                                                | Customers
+                                             span.t-txt 
+                                                | Customers that use services
+                                          .acc-fb-chart 
+                                             .igr-chart 
+                                                .chart-circle.acc-fb-chart-js(data-percent="65")
+                                                   .tag.t32 
+                                                      | 0
+                                             .t-txt 
+                                                | Total New Customers
+         .popup-close
+            i.fas.fa-times.icon
    .popup.popup-setup(data-popup-id="popup-setup")
       .popup-overlay
       .popup-main

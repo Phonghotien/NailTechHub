@@ -1,0 +1,120 @@
+extends layout/layout
+
+block vars
+    -title = 'Report'
+    -bodyClass = ''
+    -hdClass='hd-account'
+
+block container 
+   +breadCrumb(["Management"])
+   .sec-acc.ss-pd
+      .container 
+         .acc 
+            .acc-wrap 
+               .acc-row.row 
+                  .acc-left.col.col-3
+                     .acc-control 
+                        .acc-info 
+                           .igr 
+                              .acc-info-image 
+                                 .inner.preview-img
+                                    +img("avt-acc.jpg")
+                                 label.icon-edit(for='up-file-avt')
+                                    span.icon
+                                       +img("icon-edit.svg")
+                                    input#up-file-avt.upload-image(hidden='' type='file')
+                              span.t16.fw-6.c-pri
+                                 | Excellent Nails
+                        .acc-ctrs 
+                           .acc-ctrs-list 
+                              a(href="").t-link.active
+                                 span.icon 
+                                    +img("icon-acc-link.svg")
+                                 span.t-text 
+                                    | Booth Information
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link2.svg")
+                                 span.t-text 
+                                    | Booking Management
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link4.svg")
+                                 span.t-text 
+                                    | Service Management
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link3.svg")
+                                 span.t-text 
+                                    | Employee Management
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link5.svg")
+                                 span.t-text 
+                                    | Report
+                        .acc-log
+                           +Btn("Logout","","full")
+                        .acc-prof-bn 
+                           a(href="").inner 
+                              +img("acc-prof-bn.jpg")
+                        .acc-prof-btn 
+                           +Btn("Start now","","center")
+                  .acc-right.col.col-8 
+                     .acc-empm 
+                        .acc-empm-head 
+                           .t-title.t48.fw-5 
+                              | Employee management
+                           .icon-ctr 
+                              i.fa-light.fa-plus
+                        .acc-empm-block 
+                           .acc-empm-ul.row 
+                              -
+                                 var arrs = [
+                                    "h-sl-1.jpg",
+                                    "h-sl-2.jpg",
+                                    "h-sl-3.jpg",
+                                    "h-sl-4.jpg",
+                                    "h-sl-1.jpg",
+                                    "h-sl-2.jpg",
+                                 ] 
+                              each val in arrs
+                                 .acc-empm-it.col.col-6
+                                    .ab-sl-item.small
+                                       .igr-ctr 
+                                          span.icon.icon-edit 
+                                             i.fa-light.fa-pen-to-square
+                                          span.icon.icon-eye 
+                                             i.fa-light.fa-eye-slash
+                                          span.icon.icon-del 
+                                             i.fa-light.fa-xmark-large
+                                       span.inner 
+                                          span.img 
+                                             span.img-inner
+                                                +img(val) 
+                                          span.info 
+                                             h3 
+                                                .info-name Sophia Johnson
+                                             span.star
+                                                span.star-list
+                                                   span.star-flex.star-empty
+                                                      img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                      img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                      img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                      img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                      img.icon(src='./assets/images/h-star-empty.svg', alt='')
+                                                   span.star-flex.star-filter(style='width: 80%;')
+                                                      img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                      img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                      img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                      img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                                      img.icon(src='./assets/images/h-star-fill.svg', alt='')
+                                             p.info-des 
+                                                |Sophia Johnson, an experienced nail technician, offers the following nail services at his salon:
+                                             ul.info-list 
+                                                li Manicures
+                                                li Pedicures
+                                                li Gel Nails
+                                                li Acrylic Nails
+                                                li Nail Art
+                                                li Custom Nail Painting
+                           +PageNumber()
