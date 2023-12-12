@@ -1,0 +1,108 @@
+extends layout/layout
+
+block vars
+    -title = 'Account Report Date'
+    -bodyClass = ''
+    -hdClass='hd-account'
+
+block container 
+   +breadCrumb(["Management"])
+   .sec-acc.ss-pd
+      .container 
+         .acc 
+            .acc-wrap 
+               .acc-row.row 
+                  .acc-left.col.col-3
+                     .acc-control 
+                        .acc-info 
+                           .igr 
+                              .acc-info-image 
+                                 .inner.preview-img
+                                    +img("avt-acc.jpg")
+                                 label.icon-edit(for='up-file-avt')
+                                    span.icon
+                                       +img("icon-edit.svg")
+                                    input#up-file-avt.upload-image(hidden='' type='file')
+                              span.t16.fw-6.c-pri
+                                 | Excellent Nails
+                        .acc-ctrs 
+                           .acc-ctrs-list 
+                              a(href="").t-link.active
+                                 span.icon 
+                                    +img("icon-acc-link.svg")
+                                 span.t-text 
+                                    | Booth Information
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link2.svg")
+                                 span.t-text 
+                                    | Booking Management
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link4.svg")
+                                 span.t-text 
+                                    | Service Management
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link3.svg")
+                                 span.t-text 
+                                    | Employee Management
+                              a(href="").t-link
+                                 span.icon 
+                                    +img("icon-acc-link5.svg")
+                                 span.t-text 
+                                    | Report
+                        .acc-log
+                           +Btn("Logout","","full")
+                        .acc-prof-bn 
+                           a(href="").inner 
+                              +img("acc-prof-bn.jpg")
+                        .acc-prof-btn 
+                           +Btn("Start now","","center")
+                  .acc-right.col.col-9
+                     .acc-rbd 
+                        .acc-rbd-block 
+                           .acc-rbd-table 
+                              .acc-rbd-head 
+                                 .igr 
+                                    .t-text 
+                                       p.fw-7.c-pri.t16
+                                          | Week
+                                    .igrs 
+                                       .t-gr 
+                                          each i in Array(7)
+                                             .t-col 
+                                                .t-txt 
+                                                   span.t-num 
+                                                      | 30
+                                                   span.t-day 
+                                                      | Mon
+                              .acc-rbd-body 
+                                 each i in Array(5)
+                                    .acc-rbd-time 
+                                       .t-gr
+                                          .igr 
+                                             span.t-time 
+                                                | 09:00
+                                             span.t-time 
+                                                | 10:00
+                                       .acc-rbd-pick 
+                                          .acc-rbd-bl
+                                             .acc-rbd-ul 
+                                                each i in Array(3)
+                                                   .acc-rbd-it 
+                                                      .acc-rbd-box 
+                                                         .igr 
+                                                            .t-box 
+                                                               span.t-text 
+                                                                  | Alex Hoàng
+                                                               span.t-text.fw-6
+                                                                  | -
+                                                               span.t-text.fw-7 
+                                                                  | Pedicure 
+                                                            .igrs 
+                                                               span.icon 
+                                                                  i.fa-light.fa-clock
+                                                               span.t-time 
+                                                                  | 11:00 - 12:00
+                                    
