@@ -6,6 +6,55 @@ block vars
 
 block container 
    +breadCrumb(["Customer"])
+   .popup(data-popup-id="detail")
+      .popup-overlay
+      .popup-main(class="bookingDetail")
+         .popup-main-wrapper
+         .popup-over
+            .popup-wrapper
+               .container 
+                  .ck-suc 
+                     .ck-suc-bill
+                        .head.t-center 
+                           +tts("Booking detail","")
+                        .ck-suc-ctn 
+                           .ck-suc-ctn-head 
+                              .ck-suc-ctn-item
+                                 .ck-suc-ctn-wr
+                                    span.name Booking number
+                                    span.val 0123456
+                              .ck-suc-ctn-item
+                                 .ck-suc-ctn-wr
+                                    span.name Check in
+                                    span.val July 1st 2023
+                              .ck-suc-ctn-item
+                                 .ck-suc-ctn-wr
+                                    span.name Total
+                                    span.val $1,100
+                              .ck-suc-ctn-item
+                                 .ck-suc-ctn-wr
+                                    span.name Payment method
+                                    span.val Stripe
+                           .ck-suc-ctn-body.row
+                              -
+                                 var arrs = [
+                                    "Manicure",
+                                    "Pedicure",
+                                    "Pedicure",
+                                    "Pedicure",
+                                    "TAXES",
+                                    "TIP",
+                                 ] 
+                              each val in arrs
+                                 .ck-suc-item.col 
+                                    .ck-suc-item-flex
+                                       .left
+                                          span.left-tt #{val}
+                                          span.left-sub 1h 20min
+                                          span.left-price $250
+                                       .right A manicure typically includes nail shaping, cuticle care, hand massage, and nail polish application.
+         .popup-close
+            i.fas.fa-times.icon
    section.acc.ss-pd
       .container
          .acc-flex.row
@@ -49,5 +98,5 @@ block container
                                  td 
                                     .acc-table-btn(class=val) Finished
                                  td 
-                                    a(href="").acc-table-link Detail
+                                    .acc-table-link.popup-open(data-popup="detail") Detail
                   +Btn("Load more ","","three","h-ic-arrow.svg")       

@@ -1,0 +1,82 @@
+extends layout/layout
+
+block vars
+   -title = 'Rating'
+   -bodyClass = 'page-rating'
+
+block container 
+   section.rating.ss-pd 
+      .container 
+         .rating-wr 
+            .head.t-center 
+               h2.rating-tt 
+                  |Thank you for choosing 
+                  span.txt Excellent Nails!
+               p.rating-des We appreciate your visit and hope your experience with our nail salon and technicians met your expectations. Please take a moment to share your feedback with us. Your input is valuable, and it helps us continually improve our services.
+            form(action="")
+               .rating-form 
+                  .head
+                     .rating-subtt  Appointment Detail
+                  .rating-flex.row 
+                     .rating-item.col 
+                        span.tt Date of Appointment
+                        span.des November 15, 2023
+                     .rating-item.col 
+                        span.tt Technician's Name
+                        span.des Sophia Johnson
+                     .rating-item.col 
+                        span.tt Service Received
+                        span.des Manicure, Pedicure
+               .rating-exp 
+                  .head.t-center
+                     .rating-subtt  Your Experience
+                     p.rating-des On a scale of 1 to 5, how would you rate Excellent Nails?
+                  .rating-star 
+                     .rating
+                        label.stars
+                           input.star-item(type='radio', name='name', hidden='')
+                        label.stars
+                           input.star-item(type='radio', name='name', hidden='')
+                        label.stars
+                           input.star-item(type='radio', name='name', hidden='')
+                        label.stars
+                           input.star-item(type='radio', name='name', hidden='')
+                        label.stars
+                           input.star-item(type='radio', name='name', hidden='')
+                  .head.t-center
+                     p.rating-des What about nail technicians?
+                  .rating-star 
+                     .rating
+                        label.stars
+                           input.star-item(type='radio', name='name', hidden='')
+                        label.stars
+                           input.star-item(type='radio', name='name', hidden='')
+                        label.stars
+                           input.star-item(type='radio', name='name', hidden='')
+                        label.stars
+                           input.star-item(type='radio', name='name', hidden='')
+                        label.stars
+                           input.star-item(type='radio', name='name', hidden='')
+                  .head.t-center
+                     .rating-subtt  Review
+                  .rating-review 
+                     .rating-textarea 
+                        span.text Your review about the overall service
+                        .rating-area 
+                           textarea(name="", placeholder="Add review")
+                           #previewContainer 
+                     .head.t-center 
+                        +tts("Upload your photos","") 
+                     label.rating-upload
+                        span#dropArea
+                           input#fileInput(type='file', multiple='',hidden)
+                           span.tt PNG & JPEG
+                           +img("h-ic-cloud.svg")
+                           span.text 
+                              | Drag and drop files here
+                              br
+                              span.bold Or 
+                              | Select the file in your computer
+                     .rating-italic Thank you for choosing Excellent Nails! Your feedback is important to us. We look forward to serving you again soon!
+                     +Btn("Submit","button","")
+
